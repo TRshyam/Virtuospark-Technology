@@ -482,7 +482,7 @@ section {
 
 .section-bg:before {
   content: "";
-  background: #1b1b1b;
+  background: #010101;
   position: absolute;
   bottom: 60px;
   top: 60px;
@@ -566,10 +566,7 @@ section {
   opacity: 1;
   filter: none;
 }
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
+/* Merged CSS code */
 .about .container {
   position: relative;
   z-index: 10;
@@ -591,7 +588,7 @@ section {
 
 .about .content .about-btn {
   padding: 8px 30px 9px 30px;
-  color: #fff;
+  color: #f3eded;
   border-radius: 50px;
   transition: 0.3s;
   text-transform: uppercase;
@@ -614,11 +611,19 @@ section {
 
 .about .icon-boxes .icon-box {
   margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about .icon-boxes .icon-box.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #e03a3c;
+  color: #e03aa0;
   margin-bottom: 10px;
 }
 
@@ -633,9 +638,17 @@ section {
   color: #848484;
 }
 
-@media (max-width: 1200px) {
-  .about .content {
-    padding-right: 0;
+/* Apply fade-in animation to each icon box */
+.about .icon-boxes .icon-box:nth-child(1) { animation: fadeIn 1s ease 0.5s forwards; }
+.about .icon-boxes .icon-box:nth-child(2) { animation: fadeIn 1s ease 1s forwards; }
+.about .icon-boxes .icon-box:nth-child(3) { animation: fadeIn 1s ease 1.5s forwards; }
+.about .icon-boxes .icon-box:nth-child(4) { animation: fadeIn 1s ease 2s forwards; }
+
+/* Responsive styles for Additional Content Section */
+@media (max-width: 768px) {
+  #additional-content .row {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -643,6 +656,75 @@ section {
   .about {
     text-align: center;
   }
+
+  .about #additional-content .row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style for Additional Content Section */
+#additional-content {
+  background-color: #f5f5f5; /* Set background color for the section */
+  padding: 40px 0; /* Add padding to the section */
+}
+
+/* Style for Vision, Mission, and Motto Boxes */
+.vision-box,
+.mission-box,
+.motto-box {
+  background-color: #171616; /* Set background color for the boxes */
+  border-radius: 8px; /* Add border radius to create rounded corners */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  padding: 15px; /* Add padding inside the boxes */
+  margin-bottom: 20px; /* Add margin between the boxes */
+}
+
+
+/* Style for Heading 4 (H4) in the boxes */
+.vision-box h4,
+.mission-box h4,
+.motto-box h4 {
+  color: #333; /* Set text color for the heading */
+  font-size: 24px; /* Set font size for the heading */
+  margin-bottom: 15px; /* Add margin below the heading */
+}
+
+/* Style for Paragraph (P) in the boxes */
+.vision-box p,
+.mission-box p,
+.motto-box p {
+  color: #666; /* Set text color for the paragraph */
+  font-size: 16px; /* Set font size for the paragraph */
+  line-height: 1.6; /* Set line height for better readability */
+}
+
+/* Style for Columns in Vision, Mission, and Motto Boxes */
+.vision-box .row,
+.mission-box .row,
+.motto-box .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style for Individual Columns */
+.vision-box .col-lg-12,
+.mission-box .col-lg-12,
+.motto-box .col-lg-12 mt-4 {
+  width: 100%; /* Adjust width based on your design */
+  margin-bottom: 15px; /* Add margin between columns */
 }
 
 /*--------------------------------------------------------------
@@ -1108,6 +1190,7 @@ section {
   position: relative;
   overflow: hidden;
 }
+
 
 .pricing .box h3 {
   font-weight: 400;
