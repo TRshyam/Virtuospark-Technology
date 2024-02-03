@@ -693,8 +693,8 @@ section {
 .motto-box {
   flex: 1;
   max-width: 300px;
-  height: 200px;
-  background-color: #fff;
+  height: 338px;
+  background-color: #fdf7f7;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -715,7 +715,7 @@ section {
 .vision-box p,
 .mission-box p,
 .motto-box p {
-  color: #666;
+  color: #0d0d0d;
   font-size: 16px;
   line-height: 1.6;
 }
