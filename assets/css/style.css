@@ -682,39 +682,30 @@ section {
 /* Style for Additional Content Section */
 #additional-content {
   background-color: #888181;
-  padding: 40px 0;
+  padding: 50px 0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Align items at the start */
+  justify-content: space-around;
 }
 
 /* Style for Vision, Mission, and Motto Boxes */
 .vision-box,
 .mission-box,
-.motto-box,
-.box {
+.motto-box {
   flex: 1;
   max-width: 300px;
   height: 200px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin-right: 50px;
-  margin-left: 80px; /* Add margin to the left of each box except the first one */
   overflow: hidden;
-}
-
-/* Remove margin from the last box to prevent extra space */
-.motto-box,
-.box:last-child {
-  margin-right: 30px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Add box-sizing to include borders in width calculation */
 }
 
 /* Style for Heading 4 (H4) in the boxes */
 .vision-box h4,
 .mission-box h4,
-.motto-box h4,
-.box h4 {
+.motto-box h4 {
   color: #333;
   font-size: 24px;
   margin-bottom: 15px;
@@ -723,8 +714,7 @@ section {
 /* Style for Paragraph (P) in the boxes */
 .vision-box p,
 .mission-box p,
-.motto-box p,
-.box p {
+.motto-box p {
   color: #666;
   font-size: 16px;
   line-height: 1.6;
@@ -732,15 +722,15 @@ section {
 
 /* Additional styles for alignment */
 .vision-box {
-  margin-left: 20px; /* Adjust the margin for left alignment */
+  margin-top: 20px;
 }
 
 .mission-box {
-  margin : 0 auto;
+  margin : 0 15px;
 }
 
 .motto-box {
-  margin-left: auto;
+  margin-left: 20px;
 }
 
 
