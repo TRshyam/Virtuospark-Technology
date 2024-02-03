@@ -567,9 +567,11 @@ section {
   filter: none;
 }
 /* Merged CSS code */
+/* Merged CSS code */
 .about .container {
   position: relative;
   z-index: 10;
+  padding: 30px;
 }
 
 .about .content {
@@ -623,7 +625,7 @@ section {
 
 .about .icon-boxes .icon-box i {
   font-size: 40px;
-  color: #e03a3c;
+  color: #e03aa0;
   margin-bottom: 10px;
 }
 
@@ -675,57 +677,72 @@ section {
 }
 
 /* Style for Additional Content Section */
+
+
+/* Style for Additional Content Section */
 #additional-content {
-  background-color: #f5f5f5; /* Set background color for the section */
-  padding: 40px 0; /* Add padding to the section */
+  background-color: #888181;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the start */
 }
 
 /* Style for Vision, Mission, and Motto Boxes */
 .vision-box,
 .mission-box,
-.motto-box {
-  background-color: #171616; /* Set background color for the boxes */
-  border-radius: 8px; /* Add border radius to create rounded corners */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-  padding: 15px; /* Add padding inside the boxes */
-  margin-bottom: 20px; /* Add margin between the boxes */
+.motto-box,
+.box {
+  flex: 1;
+  max-width: 300px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-right: 50px;
+  margin-left: 80px; /* Add margin to the left of each box except the first one */
+  overflow: hidden;
 }
 
+/* Remove margin from the last box to prevent extra space */
+.motto-box,
+.box:last-child {
+  margin-right: 30px;
+}
 
 /* Style for Heading 4 (H4) in the boxes */
 .vision-box h4,
 .mission-box h4,
-.motto-box h4 {
-  color: #333; /* Set text color for the heading */
-  font-size: 24px; /* Set font size for the heading */
-  margin-bottom: 15px; /* Add margin below the heading */
+.motto-box h4,
+.box h4 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
 /* Style for Paragraph (P) in the boxes */
 .vision-box p,
 .mission-box p,
-.motto-box p {
-  color: #666; /* Set text color for the paragraph */
-  font-size: 16px; /* Set font size for the paragraph */
-  line-height: 1.6; /* Set line height for better readability */
+.motto-box p,
+.box p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* Style for Columns in Vision, Mission, and Motto Boxes */
-.vision-box .row,
-.mission-box .row,
-.motto-box .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Additional styles for alignment */
+.vision-box {
+  margin-left: 20px; /* Adjust the margin for left alignment */
 }
 
-/* Style for Individual Columns */
-.vision-box .col-lg-12,
-.mission-box .col-lg-12,
-.motto-box .col-lg-12 mt-4 {
-  width: 100%; /* Adjust width based on your design */
-  margin-bottom: 15px; /* Add margin between columns */
+.mission-box {
+  margin : 0 auto;
 }
+
+.motto-box {
+  margin-left: auto;
+}
+
 
 /*--------------------------------------------------------------
 # Counts
