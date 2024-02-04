@@ -1577,6 +1577,7 @@ text-align: center;
   height: 100vh;
   background: url("../img/blog/careerbg.jpg") top center no-repeat;
   background-size: cover;
+  opacity: 0.9;
   position: relative;
   padding-top: 82px;
   display: flex;
@@ -1591,6 +1592,16 @@ text-align: center;
   top: 0;
   left: 0;
   right: 0;
+}
+
+.link-arrow span {
+  display: inline-block;
+  transition: 0.1s ease-in;
+  padding-left: 15px;
+}
+
+.link-arrow:hover span {
+  transform: translateX(50%);
 }
 
 #career-hero h1 {
