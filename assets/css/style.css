@@ -953,7 +953,7 @@ section {
   float: left;
   color: #e03a3c;
   font-size: 40px;
-  line-height: 0;
+  line-height: 1;
 }
 
 .services .icon-box h4 {
