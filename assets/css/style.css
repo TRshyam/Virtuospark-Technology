@@ -1262,64 +1262,70 @@ section {
   position: relative;
   overflow: hidden;
 }
+
 .pricing .box h3 {
-  font-weight: 400;
+  font-weight: 600;
   padding: 15px;
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 600;
+  position: relative;
 }
-.pricing .box h3 ::after {
+
+.pricing .box h3::before {
   content: "";
   position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
+  width: 100%;
+  height: 1px;
   background: #e03a3c;
-  bottom: 0;
-  left: calc(50% - 25px);
-}
-.pricing.details {
-  text-align: justify;
-  position: absolute; /* Make the paragraph hidden below the box */
-  left:0 ; /* Align to the left edge of the box */
-  top: 100%; /* Position below the box initially */
-  width: 100%; /* Match the box width */
-  background-color: #e03a3c; /* Optional background for the details */
-  border-top: 1px solid #e03a3c; /* Optional border between overview and details */
-  padding: 10px; /* Adjust padding as needed */
-  opacity: 0; /* Make the paragraph initially invisible */
-  transition: opacity 0.3s ease-in-out; 
+  top: 100%;
+  left: 0;
 }
 
-.pricing.box:hover .details {
-  opacity: 1; 
+.pricing .flip-card {
+  background-color: #2b2b2b;
+  width: 400px;
+  height: 350px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin: 20px 20px 0 20px;
 }
-.pricing .box .btn-wrap {
-  padding: 15px;
+
+.pricing .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.pricing .box .btn-buy {
-  display: inline-block;
-  padding: 10px 40px 12px 40px;
-  border-radius: 4px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+.pricing .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.pricing .box .btn-buy:hover {
-  border-color: #fff;
+.pricing .flip-card-front,
+.pricing .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
-.pricing .featured {
-  background: #e03a3c;
+.pricing .flip-card-front {
+  background-color: #2b2b2b;
+}
+
+.pricing .flip-card-back {
+  background-color: #e03a3c;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -1364,7 +1370,7 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #343a40;
+  color:  #e03a3c;
 }
 
 .faq .faq-list a.collapsed:hover {
