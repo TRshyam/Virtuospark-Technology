@@ -1363,7 +1363,7 @@ text-align: center;
   display: block;
   font-size: 13px;
   font-weight: 400;
-  color: #aaaaaa;
+  color: grey;
 }
 
 .team .member .member-info p {
@@ -1604,19 +1604,21 @@ text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 150px;
 }
 
 .team .member .career-social a {
   margin: 0 3px;
-  border-radius: 15px;
-  width: 150px;
-  height: 36px;
+  border-radius: 13px;
+  width: 100px;
+  height: 30px;
   background: #e03a3c;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: ease-in-out 0.3s;
   color: #fff;
+  font-size: 13px;
 }
 
 .team .member .career-social a:hover {
