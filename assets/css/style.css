@@ -1261,13 +1261,6 @@ section {
   position: relative;
   overflow: hidden;
 }
-.pricing.box p{
-
-font-family:'Times New Roman', Times, serif;
-text-align: justify;
-text-align: center;
-
-}
 .pricing .box h3 {
   font-weight: 400;
   padding: 15px;
@@ -1275,7 +1268,32 @@ text-align: center;
   text-transform: uppercase;
   font-weight: 600;
 }
+.pricing .box h3 ::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e03a3c;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.pricing.details {
+  text-align: justify;
+  position: absolute; /* Make the paragraph hidden below the box */
+  left:0 ; /* Align to the left edge of the box */
+  top: 100%; /* Position below the box initially */
+  width: 100%; /* Match the box width */
+  background-color: #e03a3c; /* Optional background for the details */
+  border-top: 1px solid #e03a3c; /* Optional border between overview and details */
+  padding: 10px; /* Adjust padding as needed */
+  opacity: 0; /* Make the paragraph initially invisible */
+  transition: opacity 0.3s ease-in-out; 
+}
 
+.pricing.box:hover .details {
+  opacity: 1; 
+}
 .pricing .box .btn-wrap {
   padding: 15px;
   text-align: center;
