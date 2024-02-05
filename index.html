@@ -60,14 +60,30 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
       <a href="get started.html" class="get-started-btn scrollto">Get Starting</a>
     </div>
-  </header><!-- End Header -->
-
+  </header><br>
+  <!-- End Header -->
+  <section id="progress-section" class="progress-section">
+    <div id="progress-line" class="progress-line">
+      <div id="progress" class="progress" style="width: 0%;"></div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener("scroll", function () {
+      // Get the height of the entire document
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      
+      // Calculate the current scroll position as a percentage
+      const scrollPercentage = (window.scrollY / docHeight) * 100;
+      
+      // Update the width of the progress bar
+      document.getElementById("progress").style.width = scrollPercentage + "%";
+    });
+  </script>
+    
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
+  <section id="hero" class="d-flex align-items-center" style="display: flex; flex-direction: column;">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
@@ -296,7 +312,7 @@
         <div class="section-title">
           <h2>Services</h2>
           <h4>Unleash Your Digital Potential at VIRTUOSPARK</h4></br>
-          <p>Impactful design that adapts, effortless navigation that captivate and create your unforgettable digital presence today.</p>
+          <p>Impactful design that adapts, effortless navigation that captivates and create unforgettable digital presence today.</p>
         </div>
 
         <div class="row">
