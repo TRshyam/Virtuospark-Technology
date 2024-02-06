@@ -24,6 +24,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
   
   <!-- Template Main CSS File -->
@@ -573,8 +576,8 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
+                  <img src="/assets/img/team/vec5.jpg" class="testimonial-img" alt="">
+                  <h3>Krithika</h3>
                   <h4>Developer</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -588,8 +591,8 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
+                  <img src="/assets/img/team/vec3.jpg" class="testimonial-img" alt="">
+                  <h3>Udhaya Kumar</h3>
                   <h4>Business Analyst</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -603,9 +606,9 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Flutter Developer</h4>
+                  <img src="assets/img/team/vec1.jpg" class="testimonial-img" alt="">
+                  <h3>Sasi Kumar</h3>
+                  <h4>Developer</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                     The detailed breakdown of functionalities in the developer brief enabled me to quickly build a high-performing Flutter app.
@@ -618,8 +621,8 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
+                  <img src="assets/img/team/vec2.jpg" class="testimonial-img" alt="">
+                  <h3>Advaith</h3>
                   <h4>Freelancer</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -633,8 +636,8 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
+                  <img src="assets/img/team/vec4.jpg" class="testimonial-img" alt="">
+                  <h3>Riya Tomgi</h3>
                   <h4>Entrepreneur</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -917,7 +920,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Contact Number" required>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -982,8 +985,18 @@
             <h4>Join Our Newsletter</h4>
             <p>Be the first to know about exciting news & updates.</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" id="Subscribe" onclick="PopUp()" value="Subscribe">
             </form>
+            <div>
+              <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Warning: This is a warning alert!</span>
+                <div class="close-btn">
+                   <span class="fas fa-times"></span>
+                </div>
+             </div>
+            </div>
+            
           </div>
 
         </div>
