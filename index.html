@@ -36,6 +36,27 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <script>
+    function toggle()
+        {
+          document.getElementById("popup-background").style.display="block";
+        }
+    function toggleclose()
+    {
+      document.getElementById("popup-background").style.display="none";
+    }
+    function aboutscrool()
+    {
+        const additionalContent=document.getElementById("additional-content");
+        if (additionalContent) {
+        console.log(additionalContent.style.display === "none")
+        additionalContent.style.display =
+          additionalContent.style.display === "none" ? "block" : "none";
+        }
+        document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
+    }
+  </script>
 </head>
 
 <body>
@@ -61,13 +82,35 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="get started.html" class="get-started-btn scrollto">Explore</a>
+      <a class="get-started-btn scrollto" onclick="toggle()">Explore</a>
     </div>
-  </header><!-- End Header -->
-
+    <script>
+      
+          
+    </script>
+  </header><br>
+  <!-- End Header -->
+  <!-- <section id="progress-section" class="progress-section">
+    <div id="progress-line" class="progress-line">
+      <div id="progress" class="progress" style="width: 0%;"></div>
+    </div>
+  </section> -->
+  <!-- <script>
+    window.addEventListener("scroll", function () {
+      // Get the height of the entire document
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      
+      // Calculate the current scroll position as a percentage
+      const scrollPercentage = (window.scrollY / docHeight) * 100;
+      
+      // Update the width of the progress bar
+      document.getElementById("progress").style.width = scrollPercentage + "%";
+    });
+   
+  </script> -->
+    
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
+  <section id="hero" class="d-flex align-items-center" style="display: flex; flex-direction: column;">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
@@ -76,13 +119,29 @@
             	Internship Opportunities </br>
             	Risk-Free Engagement </br>	Personalised services
           </h2>
-          <a href="get started.html" class="btn-get-started scrollto">Explore</a>
+          <a class="btn-get-started scrollto" onclick="toggle()" style="cursor: pointer;">Explore</a>
         </div>
       </div>
     </div>
 
   </section><!-- End Hero -->
-
+  <section id="popup-background">
+    <div id="popup">
+      <i class='bx bx-x-circle' style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+     <form>
+      <label for="">Name</label>
+      <input type="text" name="" id="">
+      <br>
+      <label for="">Mail Id</label>
+      <input type="text">
+      <br>
+      <label for="">Phone no</label>
+      <input type="text">
+      <br>
+      <input type="submit" value="">
+     </form>
+    </div>
+  </section>
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
@@ -119,7 +178,7 @@
               <p>
                 Where ideas spark, and problems vanish, unleash your software potential with VIRTUOSPARK.
               </p>
-              <a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+              <a  style="cursor: pointer;" class="about-btn" onclick="aboutscrool()"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch">
@@ -152,7 +211,7 @@
 
       </div>
     </section><!-- End About Section -->
-    <section id="additional-content" class="about" style="display: none;">
+    <section id="additional-content" class="about" style="display: none;" >
       <div class="container" data-aos="fade-up">
         <div style="display: flex; justify-content: space-around; align-items: center;">
     
@@ -826,14 +885,14 @@
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
                   <p><B>Head Office:</B> 19/31a, odakadu, narayana nagar, Amman nagar, <br>  Kumarapalaym, Tamil Nadu - 638183.</p>
-                  <p><B>Main Branch:</B> 33, P.P.Plaza, Palanimalai Street, Kottai,Erode-638001.</p>
+                  <p><B>Branch:</B> 33, P.P.Plaza, Palanimalai Street, Kottai,Erode-638001.</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>info@virtuospark.com</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -890,8 +949,8 @@
             <h3>Virtuospark<span>.</span></h3>
             <p>
               19/31a, odakadu, narayana nagar,<br> Amman nagar, Kumarapalaym,<br> Tamil Nadu - 638183<br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> +91 8110030751<br>
+              <strong>Email:</strong> info@virtuospark.com<br>
             </p>
           </div>
 
@@ -902,8 +961,8 @@
               <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Insights</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Terms of service">Teams of Service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#Privacy policy">Privacy policy</a></li>
             </ul>
           </div>
 
@@ -921,7 +980,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Be the first to know about exciting news & updates.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
