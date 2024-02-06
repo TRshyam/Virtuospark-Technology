@@ -295,13 +295,14 @@
   new PureCounter();
 
   // Additional code for the "About" section
-  on("click", ".about-btn", (e) => {
-    e.preventDefault();
-    const additionalContent = select("#additional-content");
-    if (additionalContent) {
-      additionalContent.style.display =
-        additionalContent.style.display === "none" ? "block" : "none";
-    }
-  });
+  // on("click", ".about-btn", (e) => {
+  //   e.preventDefault();
+  //   const additionalContent = select("#additional-content");
+  //   if (additionalContent) {
+  //     console.log(additionalContent.style.display === "none")
+  //     additionalContent.style.display =
+  //       additionalContent.style.display === "none" ? "block" : "none";
+  //   }
+  // });
 
 })();

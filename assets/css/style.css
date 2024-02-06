@@ -114,6 +114,7 @@
   # Get Startet Button
   --------------------------------------------------------------*/
   .get-started-btn {
+    cursor: pointer;
     margin-left: 30px;
     background: #e03a3c;
     color: #fff;
@@ -145,7 +146,7 @@
   }
   .progress-line {
     width: 100%; /* Adjust width as needed */
-    height: 10px; /* Adjust height as needed */
+    height: 5px; /* Adjust height as needed */
     background-color: #fff; /* Background color of the progress line */
     border-radius: 5px; /* Rounded corners */
     margin: 0%;
@@ -1997,4 +1998,33 @@ section {
 }
 .item:nth-child(5) {
   --bg-color: red;
+}
+
+
+/* 
+explore-popup */
+.explore-btn
+{
+   cursor: pointer;
+}
+
+#popup-background
+{ display: none;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+}
+
+
+#popup
+{
+  margin:auto;
+  background-color: aliceblue;
+  width: fit-content;
+  padding: 20px;
 }
