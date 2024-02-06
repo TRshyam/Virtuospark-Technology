@@ -1905,6 +1905,10 @@ section {
 #footer .footer-newsletter form input[type=submit]:hover {
   background: #e35052;
 }
+.ri-close-circle-fill{
+  color: #e35052;
+  font-size: 25px;
+}
 
 #footer .credits {
   padding-top: 5px;
@@ -1997,7 +2001,7 @@ section {
   --bg-color: rgb(26, 88, 231);
 }
 .item:nth-child(5) {
-  --bg-color: red;
+  --bg-color: #e35052;
 }
 
 
@@ -2024,7 +2028,56 @@ explore-popup */
 #popup
 {
   margin:auto;
-  background-color: aliceblue;
-  width: fit-content;
+  background-color: white;
   padding: 20px;
+  width: 50%;
+}
+
+
+.eform-area {
+  background-color: transparent;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eform-area .eform-inner {
+  width: 100%;
+}
+.eform-control {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px 19px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #475F7B;
+  background-color: #FFF;
+  border: 1px solid #DFE3E7;
+  border-radius: .267rem;
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.eform-group{
+  padding: 10px;
+}
+.form-submit{
+  margin: 10px;
+  color: white;
+  background-color: red;
+}
+.form-submit:hover{
+  color: white;
+  background-color: black;
+}
+.eform-control:focus {
+  color: #475F7B;
+  background-color: #FFF;
+  border-color: #475F7B;
+  outline: 0;
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+}
+.intl-tel-input,
+.iti{
+width: 100%;
 }

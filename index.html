@@ -56,6 +56,12 @@
         }
         document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
     }
+    // -----Country Code Selection
+    $("#mobile_code").intlTelInput({
+      initialCountry: "in",
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+    });
   </script>
 </head>
 
@@ -125,23 +131,37 @@
     </div>
 
   </section><!-- End Hero -->
+  <!--explore section-->
   <section id="popup-background">
     <div id="popup">
-      <i class='bx bx-x-circle' style="float: right; size: 10px;" onclick="toggleclose()" ></i>
-     <form>
-      <label for="">Name</label>
-      <input type="text" name="" id="">
-      <br>
-      <label for="">Mail Id</label>
-      <input type="text">
-      <br>
-      <label for="">Phone no</label>
-      <input type="text">
-      <br>
-      <input type="submit" value="">
-     </form>
-    </div>
+        <i class="ri-close-circle-fill" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+        <div class="row justify-content-center">
+            <div >
+                <div class="eform-area">
+                    <div class="eform-inner">
+                      <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Lets's Get Started</h1>
+                        <form class="eform">
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="First Name" value="" />
+                            </div>
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="Last Name" value="" />
+                            </div>
+                            <div class="eform-group">
+                                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name">
+                            </div>
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="Email" name="name">
+                            </div>
+                            <button type="submit" class="btn form-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
   </section>
+  <!--end explore section-->
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
