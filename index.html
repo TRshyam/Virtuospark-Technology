@@ -32,14 +32,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Presento
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-
   <script>
     function toggle()
         {
@@ -86,6 +78,7 @@
           <li><a class="nav-link scrollto " href="#portfolio">Insights</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -124,9 +117,10 @@
       <div class="row">
         <div class="col-xl-6">
           <h1>We decode your needs, craft your success</h1>
-          <h2>	Cost-Effective Services </br>
+          <h2 style="line-height: 40px;">Cost-Effective Services </br>
             	Internship Opportunities </br>
-            	Risk-Free Engagement </br>	Personalised services
+            	Risk-Free Engagement </br>	
+              Personalised services
           </h2>
           <a class="btn-get-started scrollto" onclick="toggle()" style="cursor: pointer;">Explore</a>
         </div>
@@ -138,8 +132,12 @@
   <section id="popup-background">
     <div id="popup">
         <i class="ri-close-circle-fill" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
-        <div class="row justify-content-center">
-            <div >
+        <div style="display: flex;flex-direction: row;">
+          <div style="width: 50%;" class="explore-quotes">
+            <i class="ri-double-quotes-l"></i>
+            <p>Tired of endless searching? We curate connections that click. Register your business and find the ideal solution for your problems, effortlessly.</p>
+          </div>
+            <div class="row justify-content-center" style="width: 50%;">
                 <div class="eform-area">
                     <div class="eform-inner">
                       <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Lets's Get Started</h1>
@@ -156,7 +154,10 @@
                             <div class="eform-group">
                                 <input type="text" class="eform-control" placeholder="Email" name="name">
                             </div>
-                            <button type="submit" class="btn form-submit">Submit</button>
+                            <button type="submit" class="btn form-submit">Submit</button><br>
+                            <span> By proceeding you agree to the 
+                              <a href="">Terms</a> and <a href="">Privacy Policy.</a>
+                            </span>
                         </form>
                     </div>
                 </div>
@@ -1052,12 +1053,9 @@
             <a href="#" class="linkedin"><i class="icon bx bxl-linkedin"></i></a>
           </li>
           <li class="item">
-            <a href="#" class="youtube"><i class="icon bx bxl-youtube"></i></a>
+            <a href="#" class="youtube"><i class="icon bx bxl-whatsapp"></i></a>
           </li>
         </ul>
-        
-                    
-        
       </div>
     </div>
   </footer><!-- End Footer -->
