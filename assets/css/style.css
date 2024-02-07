@@ -1095,11 +1095,23 @@ section {
   align-items: flex-start;
   padding: 20px;
 }
-
+.portfolio .btn-blog {
+  cursor: pointer;
+    margin-left: 20px;
+    background: #e03a3c;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 1px;
+    font-weight: 500;
+    display: inline-block
+}
 .portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 20px;
+  font-size: 35px;
   color: #fff;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
