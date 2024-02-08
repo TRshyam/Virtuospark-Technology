@@ -1,0 +1,7 @@
+Flask
+pyrebase4
+Flask-Session
+python-dotenv
+flask-sqlalchemy
+psycopg2-binary
+gunicorn
