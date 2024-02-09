@@ -1,23 +1,35 @@
-# import pyrebase
+import pyrebase
 
-# # Your Firebase configuration
-# firebaseConfig = {
-#   "apiKey": "AIzaSyD3zFWGap5FHanA3mhRqH-MVL1vNzhiJyA",
-#   "authDomain": "virtuospark-b4825.firebaseapp.com",
-#   "databaseURL": "https://virtuospark-b4825.firebaseio.com",
-#   "projectId": "virtuospark-b4825",
-#   "storageBucket": "virtuospark-b4825.appspot.com",
-#   "messagingSenderId": "431621447944",
-#   "appId": "1:431621447944:web:74a72a3dfd6cb32d6c8cbd",
-#   "measurementId": "G-T0D5PML12W"
+# Your Firebase configuration
+firebaseConfig = {
+  "apiKey": "AIzaSyD3zFWGap5FHanA3mhRqH-MVL1vNzhiJyA",
+  "authDomain": "virtuospark-b4825.firebaseapp.com",
+  "databaseURL": "https://virtuospark-b4825-default-rtdb.asia-southeast1.firebasedatabase.app",
+  "projectId": "virtuospark-b4825",
+  "storageBucket": "virtuospark-b4825.appspot.com",
+  "messagingSenderId": "431621447944",
+  "appId": "1:431621447944:web:74a72a3dfd6cb32d6c8cbd",
+  "measurementId": "G-T0D5PML12W"
+}
+
+# Initialize Firebase
+firebase = pyrebase.initialize_app(firebaseConfig)
+
+# Get a reference to the Firebase database
+db = firebase.database()
+
+def create_db_client(data):
+
+    print(data)
+
+    db.child("clients").child(data['first_name']).set(data)
+
+# data_to_add = {
+#     "key1": "value1",
+#     "key2": "value2",
+#     "key3": "value3"
 # }
-
-# # Initialize Firebase
-# firebase = pyrebase.initialize_app(firebaseConfig)
-
-# # Get a reference to the Firebase database
-# db = firebase.database()
-
+# create_db(data_to_add)
 # # Example data
 # def data():
 #     data = {
@@ -46,5 +58,4 @@
 # db.child("users").push(data)
 
 # print("Data successfully pushed to the database.")
-def v(user_data):
-    print(user_data)
+

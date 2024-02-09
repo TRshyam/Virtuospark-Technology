@@ -46,7 +46,7 @@ def submit_form():
         "email":request.form['email'] ,
         "phone_number": request.form['phone_number']
         }
-    fb.v(user_data) 
+    fb.create_db_client(user_data) 
 
     return render_template('index.html')
 
