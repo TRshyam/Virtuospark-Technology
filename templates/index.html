@@ -81,8 +81,8 @@
           <!-- <li><a class="nav-link scrollto" href="#clients">Tech-Stack</a></li> -->
           <li><a class="nav-link scrollto " href="#portfolio">Insights</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="careers">Careers</a></li>
+          <li><a href="blog">Blog</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 
 
@@ -145,24 +145,10 @@
                 <div class="eform-area">
                     <div class="eform-inner">
                       <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Lets's Explore</h1>
-                        <form class="eform">
-                            <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="First Name" value="" />
-                            </div>
-                            <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Last Name" value="" />
-                            </div>
-                            <div class="eform-group">
-                                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name">
-                            </div>
-                            <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Email" name="name">
-                            </div>
-                            <button type="submit" class="btn form-submit">Submit</button><br>
-                            <span> By proceeding you agree to the 
-                              <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy.</a>
-                            </span>
-                        </form>
+                        
+                      
+                      {% include 'form.html' %}
+
                     </div>
                 </div>
             </div>

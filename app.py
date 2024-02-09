@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
+import module.firebase as fb
 
 app = Flask(__name__)
 
@@ -33,6 +34,21 @@ def blogsingle():
 @app.route('/privacypolicy')
 def privacypolicy():
     return render_template('privacypolicy.html')
+
+
+@app.route('/submit_form', methods=['POST','GET'])
+def submit_form():
+    user_data=''
+    if request.method == 'POST':
+        user_data = {
+        "first_name":request.form['first_name'],
+        "last_name":request.form['last_name'],
+        "email":request.form['email'] ,
+        "phone_number": request.form['phone_number']
+        }
+    fb.v(user_data) 
+
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
