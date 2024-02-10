@@ -174,8 +174,8 @@
         <div class="info">
           <input class="fname" type="text" name="name" placeholder="Full name" required>
           <input type="text" name="name" placeholder="Email" required> 
-          <input type="text" name="name" placeholder="Phone number" required>
-          <input type="password" name="name" pattern=".{6,}" placeholder="Password">
+          <input type="tel" name="name" pattern="[0-9]{10,}" title="Phone number must be between 10 digits" placeholder="Phone number" required>
+          <input type="password" name="name" pattern=".{6,}" title="Password must be at least 6 characters long" placeholder="Password">
           <select required>
             <option value="course-type" selected>Course type*</option>
             <option value="app-development">App Development</option>
