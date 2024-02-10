@@ -51,12 +51,6 @@
         }
         document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
     }
-    // -----Country Code Selection
-    $("#mobile_code").intlTelInput({
-      initialCountry: "in",
-      separateDialCode: true,
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
-    });
   </script>
 </head>
 
@@ -158,6 +152,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>  
+  </section>
+  <section id="popup-background" class="thankyou">
+    <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+        <div style="display: flex;flex-direction: row;">
+          <div style="width: 50%;" class="explore-quotes">
+            <p>Thankyou</p>
+          </div>
         </div>
     </div>  
   </section>

@@ -138,6 +138,16 @@
       }
       }
     </style>
+    <script>
+      function toggle()
+        {
+          document.getElementById("popup-background").style.display="block";
+        }
+      function toggleclose()
+      {
+        document.getElementById("popup-background").style.display="none";
+      }
+    </script>
   </head>
   <body>
     <div class="main-block">
@@ -165,7 +175,7 @@
           <input class="fname" type="text" name="name" placeholder="Full name" required>
           <input type="text" name="name" placeholder="Email" required> 
           <input type="text" name="name" placeholder="Phone number" required>
-          <input type="password" name="name" placeholder="Password">
+          <input type="password" name="name" pattern=".{6,}" placeholder="Password">
           <select required>
             <option value="course-type" selected>Course type*</option>
             <option value="app-development">App Development</option>
@@ -180,5 +190,15 @@
         <button type="submit" href="/">Submit</button>
       </form>
     </div>
+    <section id="popup-background" class="thankyou">
+      <div id="popup">
+          <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+          <div style="display: flex;flex-direction: row;">
+            <div style="width: 50%;" class="explore-quotes">
+              <p>Thankyou</p>
+            </div>
+          </div>
+      </div>  
+    </section>
   </body>
 </html>
