@@ -1,4 +1,7 @@
 import pyrebase
+import module.sendEmail as mail
+from flask import flash
+
 
 # Your Firebase configuration
 firebaseConfig = {
@@ -19,17 +22,19 @@ firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
 
 def create_db_client(data):
-
-    print(data)
-
+  print(data)
+  existing_user = db.child("clients").child(data['first_name']).get()
+  
+  if existing_user is None:
     db.child("clients").child(data['first_name']).set(data)
+    print("Client created successfully")
+    return 'User created successfully'
 
-# data_to_add = {
-#     "key1": "value1",
-#     "key2": "value2",
-#     "key3": "value3"
-# }
-# create_db(data_to_add)
+  else:
+    return 'User already exists'
+
+
+
 # # Example data
 # def data():
 #     data = {

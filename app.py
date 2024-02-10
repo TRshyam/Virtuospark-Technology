@@ -1,7 +1,8 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,redirect,url_for,flash
 import module.firebase as fb
 
 app = Flask(__name__)
+app.secret_key = '123456'
 
 @app.route('/')
 def homepage():
@@ -46,9 +47,9 @@ def submit_form():
         "email":request.form['email'] ,
         "phone_number": request.form['phone_number']
         }
-    fb.create_db_client(user_data) 
-
-    return render_template('index.html')
+        message=fb.create_db_client(user_data) 
+        flash(message)
+    return redirect(url_for('homepage'))
 
 if __name__ == '__main__':
     app.run(debug=True)
