@@ -83,6 +83,8 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+
+      <a class="get-started-btn scrollto" onclick="toggle()">Explore</a>
     </div>
     <script>
       
@@ -174,11 +176,11 @@
             <div class="swiper-slide"><img src="assets/img/clients/reactjs.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients//django-vector-logo.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/flask-logo.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/mongo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/mongodb.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="assets/img/clients/MySQL1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/reactnative.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/figma-logo.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/tensorflow-logo.png" class="img-fluid" alt=""></div>          </div>
+            <div class="swiper-slide"><img src="assets/img/clients/native-logo1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/figma-logo1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tensorflow-logo1.png" class="img-fluid" alt=""></div>          </div>
           <div class="swiper-pagination"></div>
         </div>
 
@@ -430,7 +432,18 @@
 
         <div class="section-title">
           <h2>Insights</h2>
-          <p>A glimpse into the future we're actively building, ensuring your journey.</p>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -439,13 +452,11 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Embracing The Immersive</h4>
-                <p>We'll guide you in the captivating world of augmented reality (AR) and virtual reality (VR), crafting solutions that blur the lines between the physical and digital, fostering deeper engagement and unforgettable experiences.</p><br>
+                <h4>App 1</h4>
+                <p>App</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!
-                  </a>
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
-                  
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -455,12 +466,11 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Beyond Websites</h4>
-                <p>We're actively exploring the potential of web3 technologies like decentralisation and blockchain to create interactive, user-owned experiences that blur the lines between the physical and digital worlds.</p><br>
+                <h4>Web 3</h4>
+                <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
-                  
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -470,11 +480,11 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>AI-powered Marketing</h4>
-                <p> Personalized marketing campaigns driven by AI and automation will deliver highly targeted messages to specific audience segments, maximizing campaign effectiveness.</p><br>
+                <h4>App 2</h4>
+                <p>App</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -484,12 +494,11 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Cloud Integration</h4>
-                <p>PCs will seamlessly integrate with cloud services, offering on-demand storage, processing power, and software access for enhanced flexibility and performance.
-                </p><br>
+                <h4>Card 2</h4>
+                <p>Card</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -499,12 +508,12 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Center Stage</h4>
-                <p>We believe in harnessing technology for good. Expect eco-friendly solutions that minimize our environmental impact, from energy-efficient hosting to sustainable hardware choices.</p><br>
+                <h4>Web 2</h4>
+                <p>Web</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
-                  </div>
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -513,18 +522,57 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Hyper-Personalize</h4>
-                <p>We'll leverage the power of AI and imagine websites that intuitively adapt to preferences, apps that anticipate your needs, and marketing campaigns that resonate on a deeply personal level.
-                </p><br>
+                <h4>App 3</h4>
+                <p>App</p>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></i></a>
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
 
@@ -765,6 +813,12 @@
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
                 <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jagadeeshmallikrishnan@gmail.com"><i class='bx bxl-gmail'></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100044219294068&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/beardjd_?igsh=N3o4cm0zeTdramti"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/jagadeesh-mallikrishnan-79b5b0211"><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
               <div class="member-info">
                 <h4>Jagadeesh</h4>
@@ -777,6 +831,12 @@
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
                 <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omsri0088@gmail.com"><i class='bx bxl-gmail'></i></a>
+                  <a href="https://www.facebook.com/omsri.eswar?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/omsri_rajan__?igsh=MWF3enRnc2dkc215eA=="><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/om-sri-eswar-184a41225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
               <div class="member-info">
                 <h4>Om Sri Eswar</h4>
@@ -788,7 +848,13 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/team/team-9.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class='bx bxl-gmail'></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
               <div class="member-info">
                 <h4>Shyam</h4>
@@ -801,6 +867,12 @@
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
                 <img src="assets/img/team/team-8.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sowmiyapriya8560@gmail.com"><i class='bx bxl-gmail'></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61555924243531&mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/sowme_papa1?utm_source=qr&igsh=MWdreGpla2tmZ28yZA=="><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61555924243531&mibextid=ZbWKwL"><i class="bi bi-linkedin"></i></a>
+                </div>
               </div>
               <div class="member-info">
                 <h4>Sowmiyapriya</h4>
@@ -840,7 +912,6 @@
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@virtuospark.com</p>
                   <p>info@virtuospark.com</p>
                 </div>
               </div>
