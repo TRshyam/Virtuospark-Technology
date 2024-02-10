@@ -872,6 +872,12 @@ section {
   font-size: 48px;
 }
 
+.tabs .nav-item p {
+  color: #e03a3c;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
 .tabs .nav-link h4 {
   font-size: 18px;
   font-weight: 600;
@@ -886,20 +892,6 @@ section {
   background: #e03a3c;
   color: #fff;
   border-color: #e03a3c;
-}
-/* Target the p elements within the .nav-item class for specificity */
-.tabs .nav-item > p {
-  color: #e03a3c; /* Set the text color to red */
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  animation: text-slide-in 1s ease-in-out; /* Add the animation */
-}
-
-/* Define the animation */
-@keyframes text-slide-in {
-  from { opacity: 0; transform: translateX(-10px); }
-  to { opacity: 1; transform: translateX(0); }
 }
 
 @media (max-width: 768px) {
