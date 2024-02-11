@@ -1112,7 +1112,7 @@ section {
 .portfolio .portfolio-wrap .portfolio-links a {
   color: rgba(255, 255, 255, 0.4);
   margin: 0 5px 0 0;
-  font-size: 28px;
+  font-size: 20px;
   display: inline-block;
   transition: 0.3s;
 }
@@ -1632,6 +1632,7 @@ section {
 --------------------------------------------------------------*/
 .blog {
   padding: 40px 0 20px 0;
+  text-align: justify;
 }
 
 .blog .entry {
@@ -1650,17 +1651,15 @@ section {
   font-size: 28px;
   font-weight: bold;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 
-.blog .entry .entry-title a {
-  color: #111111;
-  transition: 0.3s;
-}
-
-.blog .entry .entry-title a:hover {
+.blog h1 {
   color: #e03a3c;
+  font-size: 30px;
+  padding: 0;
 }
+
 
 .blog .entry .entry-meta {
   margin-bottom: 15px;
