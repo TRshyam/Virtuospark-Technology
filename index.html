@@ -137,16 +137,16 @@
                       <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Lets's Explore</h1>
                         <form class="eform">
                             <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="First Name" value="" />
+                                <input type="text" class="eform-control" placeholder="First Name" value="" required/>
                             </div>
                             <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Last Name" value="" />
+                                <input type="text" class="eform-control" placeholder="Last Name" value="" required/>
                             </div>
                             <div class="eform-group">
-                                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name">
+                                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name" required>
                             </div>
                             <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Email" name="name">
+                                <input type="text" class="eform-control" placeholder="Email" name="name" required>
                             </div>
                             <button type="submit" class="btn form-submit">Submit</button><br>
                             <span> By proceeding you agree to the 
@@ -231,7 +231,7 @@
     </section><!-- End About Section -->
     <section id="additional-content" class="about" style="display: none;" >
       <div class="container" data-aos="fade-up">
-        <div style="display: flex; justify-content: space-around; align-items: center;">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
     
           <!-- Vision Box -->
           <div class="row">
@@ -332,37 +332,90 @@
     <!-- ======= Tabs Section ======= -->
     <section id="tabs" class="tabs">
       <div class="container" data-aos="fade-up">
-        <ul class="nav nav-tabs row d-flex">
 
+        <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
-            <p>Awesome Support</p>
-            <a class="nav-link show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class="ri-customer-service-2-fill"></i>
-              <h4 class="d-none d-lg-block">Expect clear communication and responsive service.</h4>
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Awesome Support</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <p>Truly Multipurpose</p>
-            <a class="nav-link  show " data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class="ri-recycle-fill"></i>
-              <h4 class="d-none d-lg-block">We craft solutions that effortlessly bend to your will.</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">Truly Multipurpose</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <p>Easy to customize</p>
-            <a class="nav-link  show" data-bs-toggle="tab" data-bs-target="#tab-3">
-              <i class="ri-edit-box-fill"></i>
-              <h4 class="d-none d-lg-block">Our tools and services are built with easy customization .</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">Easy to customize</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <p>Responsive & Clean Design</p>
-            <a class="nav-link  show" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class="ri-booklet-line"></i>
-              <h4 class="d-none d-lg-block">Creating good design and impressive your audience.</h4>
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="ri-store-line"></i>
+              <h4 class="d-none d-lg-block">Responsive & Clean Design</h4>
             </a>
           </li>
         </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <h3>Expect clear communication and responsive service.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  We believe support shouldn't be a frustrating experience. That's why we offer crystal-clear communication and lightning-fast responses, ensuring your questions are answered before they turn into full-blown storms.
+                  Think of us as your personal support champions, dedicated to understanding your needs and resolving your issues efficiently. No more waiting in endless email queues or getting bounced around like a lost package. Clear communication from the get-go means you know exactly what's happening every step of the way.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>We craft solutions that effortlessly bend to your will.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Truly Multipurpose: Bending Solutions to Your Will Forget the days of rigid, one-size-fits-all products. Your needs are unique, and your solutions should be too. We don't just build software, we craft flexible tools that bend to your will. Think of us as architects, meticulously designing platforms and applications that seamlessly adapt to your evolving vision. Whether you're a nimble startup or an established enterprise, our solutions scale and shift alongside you. Need to add new features? No problem. Our modular design allows seamless integration and customization, ensuring your tools always align with your goals.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Our tools and services are built with easy customization.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Our commitment to easy customization isn't just a feature, it's a philosophy. he business landscape is dynamic, and your needs evolve. Our tools are built to keep pace. With intuitive interfaces and drag-and-drop functionality, you can effortlessly adapt workflows, reports, and dashboards to seamlessly reflect your changing priorities. Let everyone join the innovation journey. Our user-friendly customization features don't require coding expertise. Empower your team members to tailor their experiences, boosting efficiency and ownership.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Creating good design and impressive your audience.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  In today's digital landscape, attention is currency. To capture yours truly, design needs to be both responsive and clean.  Imagine your audience engaging with your content across diverse devices – desktops, tablets, and mobiles. A responsive design seamlessly adapts, delivering an optimal experience regardless of the screen size. This isn't just about aesthetics; it's about accessibility and respect for your audience's time. They shouldn't have to pinch, zoom, or scroll excessively to access your message. Visual clutter equals cognitive overload. A clean design prioritizes clarity and hierarchy, guiding the viewer's eye effortlessly towards the information you want them to see.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-4.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section><!-- End Tabs Section -->
 
@@ -442,7 +495,7 @@
                 <h4>Embracing The Immersive</h4>
                 <p>We'll guide you in the captivating world of augmented reality (AR) and virtual reality (VR), crafting solutions that blur the lines between the physical and digital, fostering deeper engagement and unforgettable experiences.</p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!
+                  <a href="blog.html #blog-content-1" class="btn-blog">Click Me!
                   </a>
                   <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
                   
@@ -458,7 +511,7 @@
                 <h4>Beyond Websites</h4>
                 <p>We're actively exploring the potential of web3 technologies like decentralisation and blockchain to create interactive, user-owned experiences that blur the lines between the physical and digital worlds.</p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
+                  <a href="blog.html #blog-content-2" class="btn-blog">Click Me!</a>
                   <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
                   
                 </div>
@@ -473,7 +526,7 @@
                 <h4>AI-powered Marketing</h4>
                 <p> Personalized marketing campaigns driven by AI and automation will deliver highly targeted messages to specific audience segments, maximizing campaign effectiveness.</p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
+                  <a href="blog.html #blog-content-3" class="btn-blog">Click Me!</a>
                   <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
                 </div>
               </div>
@@ -488,7 +541,7 @@
                 <p>PCs will seamlessly integrate with cloud services, offering on-demand storage, processing power, and software access for enhanced flexibility and performance.
                 </p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
+                  <a href="blog.html #blog-content-4" class="btn-blog">Click Me!</a>
                   <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
                 </div>
               </div>
@@ -502,7 +555,7 @@
                 <h4>Center Stage</h4>
                 <p>We believe in harnessing technology for good. Expect eco-friendly solutions that minimize our environmental impact, from energy-efficient hosting to sustainable hardware choices.</p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
+                  <a href="blog.html #blog-content-5" class="btn-blog">Click Me!</a>
                   <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
                   </div>
               </div>
@@ -517,7 +570,7 @@
                 <p>We'll leverage the power of AI and imagine websites that intuitively adapt to preferences, apps that anticipate your needs, and marketing campaigns that resonate on a deeply personal level.
                 </p><br>
                 <div class="portfolio-links">
-                  <a href="blog.html" class="btn-blog">Click Me!</a>
+                  <a href="blog.html #blog-content-6" class="btn-blog">Click Me!</a>
                   <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></i></a>
                 </div>
               </div>
