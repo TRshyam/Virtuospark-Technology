@@ -32,7 +32,7 @@ def create_db_client(data):
     return 'User created successfully'
 
   else:
-    return 'User already exists'
+    return None
 
 def create_db_candidates(data):
   existing_user = db.child("candidates").child(data['first_name']).get()

@@ -24,22 +24,31 @@ def register():
         try:
             user_data = {
                 "first_name": request.form['fname'],
-                "password": request.form['password'],
                 "email": request.form['email'],
                 "phone_number": request.form['phone_number'],
                 "course_type": request.form['course_type']
             }
 
-            # Uncomment the following line when you are ready to interact with the database
             message = fb.create_db_client(user_data)
+            if message is None:
+                err="already Registered"
+                print(err)
 
-            # Example flash message
-            fb.create_db_candidates(user_data)
+            print(message)
+            print(message)
+            print(message)
+            print(message)
+
+
+                
+            
+
         except Exception as e:
             # Handle any exceptions, and provide an error flash message
-            flash(f"Registration failed: {str(e)}", "danger")
+            print(f"Registration failed: {str(e)}", "danger")
+            print(f"Registration failed: {str(e)}", "danger")
 
-    return render_template('register.html')
+    return render_template('register.html',err=err)
 
 @app.route('/termofservice')
 def termofservice():
@@ -63,13 +72,14 @@ def submit_form():
     user_data=''
     if request.method == 'POST':
         user_data = {
-        "fname":request.form['first_name'],
+        "first_name":request.form['first_name'],
         "last_name":request.form['last_name'],
         "email":request.form['email'] ,
         "phone_number": request.form['phone_number']
         }
+
         message=fb.create_db_client(user_data) 
-        flash(message)
+
     return redirect(url_for('homepage'))
 
 if __name__ == '__main__':
