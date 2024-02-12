@@ -43,6 +43,15 @@ def create_db_candidates(data):
   else:
     return 'User already exists'
 
+def SubscribeList(email):
+  existing_emails = db.child('subscribers').order_by_child('email').equal_to(email).get()
 
-
+  if existing_emails.each():
+    raise ValueError(f"Email '{email}' already exists in the subscribers list.")
+  else:
+      # Use push() to generate an auto-generated unique ID as the key
+    subscriber_ref = db.child('subscribers').push({
+            'email': email,
+        })
+    return
 

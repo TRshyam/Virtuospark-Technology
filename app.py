@@ -6,6 +6,8 @@ app.secret_key = '123456'
 
 @app.route('/')
 def homepage():
+
+
     return render_template('index.html')
 
 
@@ -82,6 +84,23 @@ def submit_form():
         message=fb.create_db_client(user_data) 
 
     return redirect(url_for('homepage'))
+
+@app.route('/subscribe',methods=['POST','GET'])
+def subscribe():
+    mess=''
+    if request.method=='POST':
+        email=request.form['email']
+        mess=fb.SubscribeList(email)
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+        #NEED TO ADD THE NOTES 
+    return redirect(url_for('homepage',mess=mess))
 
 if __name__ == '__main__':
     app.run(debug=True)
