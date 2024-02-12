@@ -2631,7 +2631,7 @@ border-radius:50%;
 -ms-transition:.5s; 
 -o-transition:.5s;
   transition: .5s;
-z-index: 2;
+z-index: 1000;
 }
 #scroll-Top  .return-to-top:hover {
   background:#f43032;
