@@ -20,6 +20,7 @@ def portfolio():
 
 @app.route('/register', methods=['POST','GET'])
 def register():
+    err=''
     if request.method == 'POST':
         try:
             user_data = {
