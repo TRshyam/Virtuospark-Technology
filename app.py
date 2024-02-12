@@ -8,6 +8,8 @@ app.secret_key = '123456'
 def homepage():
     return render_template('index.html')
 
+
+
 @app.route('/careers')
 def careers():
     return render_template('careers.html')
@@ -16,8 +18,27 @@ def careers():
 def portfolio():
     return render_template('portfolio-details.html')
 
-@app.route('/register')
+@app.route('/register', methods=['POST','GET'])
 def register():
+    if request.method == 'POST':
+        try:
+            user_data = {
+                "first_name": request.form['fname'],
+                "password": request.form['password'],
+                "email": request.form['email'],
+                "phone_number": request.form['phone_number'],
+                "course_type": request.form['course_type']
+            }
+
+            # Uncomment the following line when you are ready to interact with the database
+            message = fb.create_db_client(user_data)
+
+            # Example flash message
+            fb.create_db_candidates(user_data)
+        except Exception as e:
+            # Handle any exceptions, and provide an error flash message
+            flash(f"Registration failed: {str(e)}", "danger")
+
     return render_template('register.html')
 
 @app.route('/termofservice')
@@ -42,7 +63,7 @@ def submit_form():
     user_data=''
     if request.method == 'POST':
         user_data = {
-        "first_name":request.form['first_name'],
+        "fname":request.form['first_name'],
         "last_name":request.form['last_name'],
         "email":request.form['email'] ,
         "phone_number": request.form['phone_number']

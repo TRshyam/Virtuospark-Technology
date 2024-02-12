@@ -15,10 +15,7 @@
       font-family: Roboto, Arial, sans-serif;
       font-size: 16px;
       }
-      body {
-      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
-      background-size: cover;
-      }
+
       h1, h2 {
       text-transform: uppercase;
       font-weight: bold;
@@ -153,20 +150,19 @@
             <li>Learn Fast, Grow Faster</li>
             <li>Become the best version of yourself</li>
           </ul>
-          
         </div>
       </div>
-      <form action="/">
+      <form action="/register" method="POST">
         <div class="title">
           <i class="fas fa-pencil-alt"></i> 
           <h2>Register here</h2>
         </div>
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Full name">
-          <input type="text" name="name" placeholder="Email">
-          <input type="text" name="name" placeholder="Phone number">
-          <input type="password" name="name" placeholder="Password">
-          <select>
+          <input class="fname" type="text" name="fname" placeholder="Full name" required>
+          <input type="text" name="email" placeholder="Email" required>
+          <input type="text" name="phone_number" placeholder="Phone number" required>
+          <!-- <input type="password" name="password" placeholder="Password" required> -->
+          <select name="course_type" >
             <option value="course-type" selected>Course type*</option>
             <option value="app-development">App Development</option>
             <option value="uiux-development">UIUX Development</option>
@@ -175,7 +171,7 @@
           </select>
         </div>
         <div class="checkbox">
-          <input type="checkbox" name="checkbox"><span style="color: #999b9b">I agree to the <a href="privacypolicy.html">Privacy Policy.</a></span>
+          <input type="checkbox" name="checkbox" required><span style="color: #999b9b" >I agree to the <a href="privacypolicy.html">Privacy Policy.</a></span>
         </div>
         <button type="submit" href="/">Submit</button>
       </form>

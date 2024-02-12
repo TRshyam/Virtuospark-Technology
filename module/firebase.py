@@ -1,6 +1,6 @@
 import pyrebase
 import module.sendEmail as mail
-from flask import flash
+
 
 
 # Your Firebase configuration
@@ -25,42 +25,24 @@ def create_db_client(data):
   print(data)
   existing_user = db.child("clients").child(data['first_name']).get()
   
-  if existing_user is None:
+  if existing_user.val() is None:
     db.child("clients").child(data['first_name']).set(data)
+    mail.send_mail(data)
     print("Client created successfully")
     return 'User created successfully'
 
   else:
     return 'User already exists'
 
+def create_db_candidates(data):
+  existing_user = db.child("candidates").child(data['first_name']).get()
+  if existing_user.val() is None:
+    db.child("candidates").child(data['first_name']).set(data)
+    print("Client created successfully")
+    return 'User created successfully'
+  else:
+    return 'User already exists'
 
 
-# # Example data
-# def data():
-#     data = {
-#         "full_name": "John Doe",
-#         "email": "john.doe@example.com",
-#         "phone_number": "1234567890",
-#         "password": "securepassword",
-#         "options": "",
-# }
 
-# def create_db(data):   
-
-#     # print(data)
-#     user_data=data.copy()
-#     user_data.pop('user_id')
-#     # print(data['user_id'])
-#     # print(user_data)
-#     db.child("company_users").child(data['user_id']).set(user_data)
-#     print("fb created")
-#     print("fb created")
-#     print("fb created")
-#     print("fb created")
-#     print("fb created") 
-
-# # Push the data to the database
-# db.child("users").push(data)
-
-# print("Data successfully pushed to the database.")
 
