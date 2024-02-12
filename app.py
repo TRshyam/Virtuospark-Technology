@@ -30,7 +30,7 @@ def register():
                 "course_type": request.form['course_type']
             }
 
-            message = fb.create_db_client(user_data)
+            message = fb.create_db_candidates(user_data)
             if message is None:
                 err="already Registered"
                 print(err)
