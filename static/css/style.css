@@ -2164,8 +2164,10 @@ section {
 #career-hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/blog/careerbg.jpg") top center no-repeat;
+  /* background-image: url('/static/assets/img/hero-bg2.jpg'); */
+  background-image: url('/static/assets/img//blog/careerbg.jpg');
   background-size: cover;
+  background-position: center;
   opacity: 0.9;
   position: relative;
   padding-top: 82px;
