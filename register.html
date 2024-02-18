@@ -236,7 +236,37 @@
           <span id="checkboxError" style="color: #e03a3c;"></span><br>
         </div>
         <button type="submit">Submit</button>
-      </form>    
+      </form>
+      <section id="popup-background">
+        <div id="popup">
+            <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+            <div style="display: flex;flex-direction: row;">
+              <div style="width: 50%;" class="explore-quotes">
+                <p>Thankyou</p>
+              </div>
+            </div>
+        </div>  
+      </section>
+      <script>
+        function toggle()
+            {
+              document.getElementById("popup-background").style.display="block";
+            }
+        function toggleclose()
+        {
+          document.getElementById("popup-background").style.display="none";
+        }
+        function aboutscrool()
+        {
+            const additionalContent=document.getElementById("additional-content");
+            if (additionalContent) {
+            console.log(additionalContent.style.display === "none")
+            additionalContent.style.display =
+              additionalContent.style.display === "none" ? "block" : "none";
+            }
+            document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
+        }
+      </script>    
     </div>
   </body>
 </html>
