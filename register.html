@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Educational registration form</title>
+    <title>Registration form</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
@@ -141,7 +141,6 @@
         var name = document.forms["myForm"]["name"].value;
         var email = document.forms["myForm"]["email"].value;
         var phone = document.forms["myForm"]["phone"].value;
-        var password = document.forms["myForm"]["password"].value;
         var checkbox = document.forms["myForm"]["checkbox"].checked;
         var course = document.forms["myForm"]["course"].value;
     
@@ -168,14 +167,6 @@
           return false;
         } else {
           document.getElementById("phoneError").innerHTML = "";
-        }
-    
-        // Password validation (at least 6 characters)
-        if (password.length < 6) {
-          document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters long";
-          return false;
-        } else {
-          document.getElementById("passwordError").innerHTML = "";
         }
     
         // Course validation
@@ -231,8 +222,6 @@
           <span id="emailError" style="color: #e03a3c;"></span><br>
           <input type="tel" name="phone" placeholder="Phone number"><br>
           <span id="phoneError" style="color: #e03a3c;"></span><br>
-          <input type="password" name="password" placeholder="Password"><br>
-          <span id="passwordError" style="color: #e03a3c;"></span><br>
           <select name="course">
             <option value="course-type" selected>Course type</option>
             <option value="app-development">App Development</option>
