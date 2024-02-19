@@ -1,7 +1,12 @@
 (async function () {
     "use strict";
 
-    let forms = document.querySelectorAll('.php-email-form');
+    let forms = document.querySelectorAll('.php-emaneedsil-form');
+    console.log(forms);
+    console.log(forms);
+    console.log(forms);
+    console.log(forms);
+    console.log(forms);
 
     forms.forEach(async function (e) {
         e.addEventListener('submit', async function (event) {
@@ -44,10 +49,7 @@
 
     async function php_email_form_submit(thisForm, action, formData) {
         try {
-          console.log('tryblock');
-          console.log('tryblock');
-          console.log('tryblock');
-          console.log('tryblock');
+
             let response = await fetch(action, {
                 method: 'POST',
                 body: formData,
