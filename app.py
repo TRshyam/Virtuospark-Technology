@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request,redirect,url_for,flash
+from flask import Flask, render_template,request,redirect,url_for,flash,jsonify
 import module.firebase as fb
 
 app = Flask(__name__)
@@ -84,6 +84,24 @@ def submit_form():
         message=fb.create_db_client(user_data) 
 
     return redirect(url_for('homepage'))
+
+@app.route('/contact', methods=['POST','GET'])
+def contact_form():
+    mes="helloWorld"
+    try:
+        if request.method=='POST':
+            message={
+                "name":request.form["name"],
+                "number":request.form["number"],
+                "message":request.form["message"]
+        }
+        return  'Form submitted successfully'
+
+    except Exception as err :
+        return err
+
+            
+
 
 @app.route('/subscribe',methods=['POST','GET'])
 def subscribe():
