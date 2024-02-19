@@ -7,11 +7,7 @@ app.secret_key = '123456'
 
 @app.route('/')
 def homepage():
-
-
     return render_template('index.html')
-
-
 
 @app.route('/careers')
 def careers():
@@ -34,18 +30,11 @@ def register():
             }
 
             message = fb.create_db_candidates(user_data)
+            err=message
+            # flash(message)
             if message is None:
                 err="already Registered"
-                print(err)
-
-            print(message)
-            print(message)
-            print(message)
-            print(message)
-
-
-                
-            
+                print(err)            
 
         except Exception as e:
             # Handle any exceptions, and provide an error flash message
