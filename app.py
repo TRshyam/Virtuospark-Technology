@@ -1,5 +1,6 @@
 from flask import Flask, render_template,request,redirect,url_for,flash,jsonify
 import module.firebase as fb
+import module.sendEmail as se
 
 app = Flask(__name__)
 app.secret_key = '123456'
@@ -87,7 +88,6 @@ def submit_form():
 
 @app.route('/contact', methods=['POST','GET'])
 def contact_form():
-    mes="helloWorld"
     try:
         if request.method=='POST':
             message={
@@ -95,7 +95,9 @@ def contact_form():
                 "number":request.form["number"],
                 "message":request.form["message"]
         }
-        return  'Form submitted successfully'
+            se.send_mes(message)
+            
+        return 'OK'
 
     except Exception as err :
         return err
