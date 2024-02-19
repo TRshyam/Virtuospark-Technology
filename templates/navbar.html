@@ -1,5 +1,6 @@
 <nav id="navbar" class="navbar order-last order-lg-0">
     <ul>
+<<<<<<< HEAD
         <li><a class="nav-link scrollto active" href="/">Home</a></li>
         <li><a class="nav-link scrollto" href="/#about">About</a></li>
         <li><a class="nav-link scrollto" href="/#services">Services</a></li>
@@ -9,6 +10,21 @@
         <li><a href="careers">Careers</a></li>
         <li><a href="blog">Blog</a></li>
         <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+=======
+        <li><a class="nav-link scrollto " href="{{url_for('homepage')}}">Home</a></li>
+        <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#about">About</a></li>        
+        <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#services">Services</a></li>
+        <!-- <li><a class="nav-link scrollto" href="#clients">Tech-Stack</a></li> -->
+        <li><a class="nav-link scrollto " href="{{ url_for('homepage') }}#portfolio">Insights</a></li>
+        <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#team">Team</a></li>
+        <li><a href="careers">Careers</a></li>
+        <li><a href="blog">Blog</a></li>
+        <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#contact">Contact</a></li>
+
+
+
+
+>>>>>>> ced954808eb0ffc11e71ae79521d902c3f619511
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
 </nav><!-- .navbar -->
