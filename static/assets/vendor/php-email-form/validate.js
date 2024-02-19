@@ -2,11 +2,11 @@
     "use strict";
 
     let forms = document.querySelectorAll('.php-emaneedsil-form');
-    console.log(forms);
-    console.log(forms);
-    console.log(forms);
-    console.log(forms);
-    console.log(forms);
+    // console.log(forms);
+    // console.log(forms);
+    // console.log(forms);
+    // console.log(forms);
+    // console.log(forms);
 
     forms.forEach(async function (e) {
         e.addEventListener('submit', async function (event) {

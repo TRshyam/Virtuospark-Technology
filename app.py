@@ -73,18 +73,25 @@ def privacypolicy():
 
 @app.route('/submit_form', methods=['POST','GET'])
 def submit_form():
-    user_data=''
+    # user_data=''
+    
     if request.method == 'POST':
         user_data = {
-        "first_name":request.form['first_name'],
-        "last_name":request.form['last_name'],
-        "email":request.form['email'] ,
-        "phone_number": request.form['phone_number']
-        }
+            "first_name":request.form['first_name'],
+            "last_name":request.form['last_name'],
+            "email":request.form['email'] ,
+            "phone_number": request.form['phone_number']
+            }
 
         message=fb.create_db_client(user_data) 
+        print(message)
+        print(message)
+        print(message)
+        print(message)
 
-    return redirect(url_for('homepage'))
+
+    return message
+
 
 @app.route('/contact', methods=['POST','GET'])
 def contact_form():
@@ -108,19 +115,14 @@ def contact_form():
 @app.route('/subscribe',methods=['POST','GET'])
 def subscribe():
     mess=''
-    if request.method=='POST':
-        email=request.form['email']
-        mess=fb.SubscribeList(email)
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-        #NEED TO ADD THE NOTES 
-    return redirect(url_for('homepage',mess=mess))
+    try:
+        if request.method=='POST':
+            email=request.form['email']
+            mess=fb.SubscribeList(email)
+        return mess
+    except Exception:
+        return 'No'
+
 
 if __name__ == '__main__':
     app.run(debug=True)

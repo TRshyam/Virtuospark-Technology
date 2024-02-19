@@ -29,12 +29,16 @@ def create_db_client(data):
     db.child("clients").child(data['first_name']).set(data)
     mail.send_mail(data)
     print("Client created successfully")
-    return 'User created successfully'
+    return 'OK'
 
   else:
-    return None
+    return 'no'
 
 def create_db_candidates(data):
+  print(data)
+  print(data)
+  print(data)
+  print(data)
   existing_user = db.child("candidates").child(data['first_name']).get()
   if existing_user.val() is None:
     db.child("candidates").child(data['first_name']).set(data)
@@ -53,5 +57,9 @@ def SubscribeList(email):
     subscriber_ref = db.child('subscribers').push({
             'email': email,
         })
-    return
+    return 'OK'
 
+
+
+# m={'first_name': 'SHYAM', 'last_name': 'T.R', 'email': 't.r.shyam0007@gmail.com', 'phone_number': '07448384181'}
+# print(create_db_candidates(m))
