@@ -137,13 +137,19 @@
       }
     </style>
     <script>
+      function toggle() {
+        document.getElementById("popup-background").style.display = "block";
+      }
+      function toggleclose() {
+        document.getElementById("popup-background").style.display = "none";
+      }
       function validateform() {
         var name = document.forms["myForm"]["name"].value;
         var email = document.forms["myForm"]["email"].value;
         var phone = document.forms["myForm"]["phone"].value;
         var checkbox = document.forms["myForm"]["checkbox"].checked;
         var course = document.forms["myForm"]["course"].value;
-    
+
         // Name validation (not empty)
         if (name == "") {
           document.getElementById("nameError").innerHTML = "Name must be filled out";
@@ -151,7 +157,7 @@
         } else {
           document.getElementById("nameError").innerHTML = "";
         }
-    
+
         // Email validation
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
@@ -160,7 +166,7 @@
         } else {
           document.getElementById("emailError").innerHTML = "";
         }
-    
+
         // Phone validation (10 digits and only digits)
         if (isNaN(phone) || phone.length != 10) {
           document.getElementById("phoneError").innerHTML = "Phone number must be 10 digits";
@@ -168,7 +174,7 @@
         } else {
           document.getElementById("phoneError").innerHTML = "";
         }
-    
+
         // Course validation
         if (course == "course-type") {
           document.getElementById("courseError").innerHTML = "Please select a course";
@@ -176,7 +182,7 @@
         } else {
           document.getElementById("courseError").innerHTML = "";
         }
-    
+
         // Checkbox validation
         if (!checkbox) {
           document.getElementById("checkboxError").innerHTML = "Please agree to the Privacy Policy";
@@ -184,12 +190,23 @@
         } else {
           document.getElementById("checkboxError").innerHTML = "";
         }
-    
+
         // Successful submit message
-        alert("Form submitted successfully!");
+        toggle(); // Show popup
         return true;
       }
-    </script>
+      window.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        window.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+                (e.ctrlKey && e.key === 'u')) {
+                e.preventDefault();
+           }
+        });
+    </script> 
     
     
   </head>
@@ -237,48 +254,16 @@
         </div>
         <button type="submit">Submit</button>
       </form>
-      <section id="popup-background">
+      <section id="popup-background" style="display: none;">
         <div id="popup">
             <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
             <div style="display: flex;flex-direction: row;">
               <div style="width: 50%;" class="explore-quotes">
-                <p>Thankyou</p>
+                <p>Thank you for registering!</p>
               </div>
             </div>
         </div>  
-      </section>
-      <script>
-        function toggle()
-            {
-              document.getElementById("popup-background").style.display="block";
-            }
-        function toggleclose()
-        {
-          document.getElementById("popup-background").style.display="none";
-        }
-        function aboutscrool()
-        {
-            const additionalContent=document.getElementById("additional-content");
-            if (additionalContent) {
-            console.log(additionalContent.style.display === "none")
-            additionalContent.style.display =
-              additionalContent.style.display === "none" ? "block" : "none";
-            }
-            document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
-        }
-        window.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-
-        window.addEventListener('keydown', function (e) {
-            if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
-                (e.ctrlKey && e.key === 'u')) {
-                e.preventDefault();
-           }
-        });
-
-      </script>    
+      </section> 
     </div>
   </body>
 </html>
