@@ -31,14 +31,20 @@
     
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <script>
+      window.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+      });
 
-  <!-- =======================================================
-  * Template Name: Presento
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+      window.addEventListener('keydown', function (e) {
+          if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+              (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+              (e.ctrlKey && e.key === 'u')) {
+              e.preventDefault();
+         }
+      });
+
+    </script>
 </head>
 
 <body>
