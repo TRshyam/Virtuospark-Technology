@@ -31,6 +31,19 @@
   
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    window.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+    
+    window.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.key === 'u')) {
+            e.preventDefault();
+        }
+    });
+    </script>
 </head>
 
 <body>

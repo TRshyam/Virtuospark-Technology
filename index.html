@@ -51,6 +51,18 @@
         }
         document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
     }
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    window.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.key === 'u')) {
+            e.preventDefault();
+       }
+    });
+
   </script>
 </head>
 
