@@ -65,18 +65,7 @@ def submit_form():
             "email":request.form['email'] ,
             "phone_number": request.form['phone_number']
             }
-        print(user_data)
-        print(user_data)
-        print(user_data)
-        print(user_data)
-
         message=fb.create_db_client(user_data) 
-        print(message)
-        print(message)
-        print(message)
-        print(message)
-
-
     return message
 
 
@@ -89,7 +78,7 @@ def contact_form():
                 "number":request.form["number"],
                 "message":request.form["message"]
         }
-            se.send_mes(message)
+            se.clients_mail(message)
             
         return 'OK'
 
@@ -101,14 +90,16 @@ def contact_form():
 
 @app.route('/subscribe',methods=['POST','GET'])
 def subscribe():
-    mess=''
+    
     try:
+        mess='hel'
         if request.method=='POST':
             email=request.form['email']
             mess=fb.SubscribeList(email)
         return mess
-    except Exception:
-        return 'No'
+    except Exception  as e:
+        return str(e)
+        # return 'No'
 
 
 if __name__ == '__main__':
