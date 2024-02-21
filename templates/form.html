@@ -12,7 +12,7 @@
                 <div class="eform-area">
                     <div class="eform-inner">
                         <h1 style="font-size: 25px; padding: 10px; color: black;">Welcome! Let's Explore</h1>
-                        <form class="eform" method="POST" action="/submit_form" id="statusMessage">
+                        <form method="POST" action="/submit_form"  onsubmit="handleSubmit(event, '/submit_form')">
                             <div class="eform-group">
                                 <input type="text" class="eform-control" placeholder="First Name" value=""
                                     name="first_name" />
@@ -28,6 +28,8 @@
                             <div class="eform-group">
                                 <input type="text" class="eform-control" placeholder="Email" name="email">
                             </div>
+                                <div class="popup-message"></div>
+
                             <button type="submit" class="btn form-submit">Submit</button><br>
                             <span> By proceeding you agree to the
                                 <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy

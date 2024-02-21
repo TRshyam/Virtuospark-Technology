@@ -41,39 +41,39 @@
   <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
 
 
+
   <script>
 
-            document.addEventListener('DOMContentLoaded', function () {
-                // Check if the 'mess' parameter is present
-                var mess = '{{ mess }}';
+    document.addEventListener('DOMContentLoaded', function () {
+      // Check if the 'mess' parameter is present
+      var mess = '{{ mess }}';
 
-                if (mess) {
-                  // Display the 'mess' value in an alert box
-                  alert(mess);
-                }
-              });
+      if (mess) {
+        // Display the 'mess' value in an alert box
+        alert(mess);
+      }
+    });
 
 
-    function toggle()
-        {
-          document.getElementById("popup-background").style.display="block";
-        }
-    function toggleclose()
-    {
-      document.getElementById("popup-background").style.display="none";
+    function toggle() {
+      document.getElementById("popup-background").style.display = "block";
     }
-    function aboutscrool()
-    {
-        const additionalContent=document.getElementById("additional-content");
-        if (additionalContent) {
+    function toggleclose() {
+      document.getElementById("popup-background").style.display = "none";
+    }
+    function aboutscrool() {
+      const additionalContent = document.getElementById("additional-content");
+      if (additionalContent) {
         console.log(additionalContent.style.display === "none")
         additionalContent.style.display =
           additionalContent.style.display === "none" ? "block" : "none";
-        }
-        document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
+      }
+      document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
   </script>
+  <script src='static/assets/vendor/popup/regpopup.js'></script>
+
 </head>
 
 <body>
@@ -87,6 +87,7 @@
 {% endwith %}
 
   <!-- ======= Header ======= -->
+
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center"> 
       <h1 class="logo me-auto"><a href="/">Virtuospark<span>.</span></a></h1>
@@ -127,6 +128,7 @@
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row" style="margin-top: 100px;">
         <div class="col-xl-6">
+
           <h1>We decode your needs, craft your success</h1>
           <h2 style="line-height: 40px;">Transform your work, protect your data.<br> Unmatched power, unwavering trust.</h2>
           <a class="btn-get-started scrollto" onclick="toggle()" style="cursor: pointer;">Explore</a>
@@ -1005,7 +1007,11 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Be the first to know about exciting news & updates.</p>
-            {%include 'sub.html'%}
+           
+
+               {%include 'sub.html'%}
+
+
             <div>
               <div class="alert hide">
                 <span class="fas fa-exclamation-circle"></span>
@@ -1072,8 +1078,9 @@
   <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="static/assets/vendor/php-email-form/validate.js"></script>
-  <script src="static/assets/vendor/popup/popup.js"></script>
-  <script src="static/assets/vendor/popup/expop.js"></script>
+
+  <script src='static/assets/vendor/popup/regpopup.js'></script>
+  <script src='static/assets/vendor/popup/popup.js'></script>
 
 
   <!-- Template Main JS File -->

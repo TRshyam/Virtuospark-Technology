@@ -29,10 +29,10 @@ def create_db_client(data):
     db.child("clients").child(data['first_name']).set(data)
     mail.send_mail(data)
     print("Client created successfully")
-    return 'OK'
+    return 'Registered Successfully'
 
   else:
-    return 'no'
+    return "None"
 
 def create_db_candidates(data):
   print(data)
@@ -43,10 +43,9 @@ def create_db_candidates(data):
   if existing_user.val() is None:
     db.child("candidates").child(data['first_name']).set(data)
     print("Client created successfully")
-    return 'User created successfully'
+    return 'Registered Successfully'
   else:
-    return 'User already exists'
-
+    return "None"
 def SubscribeList(email):
   existing_emails = db.child('subscribers').order_by_child('email').equal_to(email).get()
 
@@ -63,3 +62,4 @@ def SubscribeList(email):
 
 # m={'first_name': 'SHYAM', 'last_name': 'T.R', 'email': 't.r.shyam0007@gmail.com', 'phone_number': '07448384181'}
 # print(create_db_candidates(m))
+# create_db_client()

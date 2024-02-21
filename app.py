@@ -19,7 +19,7 @@ def portfolio():
 
 @app.route('/register', methods=['POST','GET'])
 def register():
-    err=''
+    err = ''
     if request.method == 'POST':
         try:
             user_data = {
@@ -30,18 +30,13 @@ def register():
             }
 
             message = fb.create_db_candidates(user_data)
-            err=message
-            # flash(message)
-            if message is None:
-                err="already Registered"
-                print(err)            
+            return message
 
         except Exception as e:
-            # Handle any exceptions, and provide an error flash message
             print(f"Registration failed: {str(e)}", "danger")
-            print(f"Registration failed: {str(e)}", "danger")
+            return f'<script>   ("Registration failed: {str(e)}", "danger");</script>'
 
-    return render_template('register.html',err=err)
+    return render_template('register.html')
 
 @app.route('/termofservice')
 def termofservice():
@@ -62,8 +57,7 @@ def privacypolicy():
 
 @app.route('/submit_form', methods=['POST','GET'])
 def submit_form():
-    # user_data=''
-    
+    user_data=''
     if request.method == 'POST':
         user_data = {
             "first_name":request.form['first_name'],
@@ -71,6 +65,10 @@ def submit_form():
             "email":request.form['email'] ,
             "phone_number": request.form['phone_number']
             }
+        print(user_data)
+        print(user_data)
+        print(user_data)
+        print(user_data)
 
         message=fb.create_db_client(user_data) 
         print(message)

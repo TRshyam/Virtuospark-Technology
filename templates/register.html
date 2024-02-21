@@ -1,182 +1,236 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Educational registration form</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <style>
-      html, body {
-      min-height: 100%;
-      }
-      body, div, form, input, select { 
-      padding: 0;
-      margin: 0;
-      outline: none;
-      font-family: Roboto, Arial, sans-serif;
-      font-size: 16px;
-      }
+<html lang="en">
 
-      h1, h2 {
-      text-transform: uppercase;
-      font-weight: bold;
-      }
-      h2 {
-      margin: 0 0 0 8px;
-      }
-      .main-block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-      width: 100%;
-      height: 96.5%;
-      background: #fff;
-      }
-      .left-part, form {
-        padding: 25px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .left-part {
-      text-align: center;
-      background: #323635;
-      color: white;
-      }
-      .fa-graduation-cap {
-      font-size: 72px;
-      }
-      form {
-        background: white;
-      }
-      .title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      }
-      .info {
-      display: flex;
-      flex-direction: column;
-      }
-      input, select {
-      padding: 5px;
-      margin-bottom: 30px;
-      background: transparent;
-      color: #999b9b;
-      border: none;
-      border-bottom: 1px solid #d6d5d5;
-      }
-      input::placeholder {
-      color: #999b9b;
-      }
-      option:focus {
-      border: none;
-      }
-      option {
-      background: white; 
-      border: none;
-      }
-      .checkbox input {
-      margin: 0 10px 0 0;
-      vertical-align: middle;
-      }
-      .checkbox a {
-      color: #26a9e0;
-      }
-      .checkbox a:hover {
-      color: #85d6de;
-      }
-      .card-quotes{
-        color: white;
-        text-align: start;
-        margin-left: 100px;
-        font-size: 18px;
-      }
-      ul {
-        list-style: none;
-        line-height: 50px;
-      }
-      ul li:before {
-        content: '\2714\0020';
-        color: #e03a3c;
-      }
-      .btn-item, button {
-      padding: 10px 5px;
-      margin-top: 20px;
-      border-radius: 5px; 
-      border: none;
-      background: #e03a3c; 
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: 400;
-      color: #fff;
-      }
-      .btn-item {
-      display: inline-block;
-      margin: 20px 5px 0;
-      }
-      button {
-      width: 15%;
-      }
-      button:hover, .btn-item:hover {
-      background: black;
-      }
-      @media (min-width: 568px) {
-      html, body {
-      height: 100%;
-      }
-      .main-block {
-      flex-direction: row;
-      }
-      .left-part, form {
-      flex: 1;
-      }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-graduation-cap" style="color: #e03a3c;"></i>
-        <h1>Register to get intern</h1>
-        <p style="font-size: 18px;">Ready to unleash your potential? Register for our internship program today!</p>
-        <div class="card-quotes">
-          <ul>
-            <li>Work hard, play hard</li>
-            <li>Find your tribe</li>
-            <li>Level Up Your Skills</li>
-            <li>Learn Fast, Grow Faster</li>
-            <li>Become the best version of yourself</li>
-          </ul>
-        </div>
+<head>
+  <title>Educational registration form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <script src='static/assets/vendor/popup/regpopup.js'></script>
+
+      <style>
+        html,
+        body {
+          min-height: 100%;
+        }
+      
+        body,
+        div,
+        form,
+        input,
+        select {
+          padding: 0;
+          margin: 0;
+          outline: none;
+          font-family: Roboto, Arial, sans-serif;
+          font-size: 16px;
+        }
+      
+        h1,
+        h2 {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      
+        h2 {
+          margin: 0 0 0 8px;
+        }
+      
+        .main-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 96.5%;
+          background: #fff;
+        }
+      
+        .left-part,
+        form {
+          padding: 25px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      
+        .left-part {
+          text-align: center;
+          background: #323635;
+          color: white;
+        }
+      
+        .fa-graduation-cap {
+          font-size: 72px;
+        }
+      
+        form {
+          background: white;
+        }
+      
+        .title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+      
+        .info {
+          display: flex;
+          flex-direction: column;
+        }
+      
+        input,
+        select {
+          padding: 5px;
+          margin-bottom: 30px;
+          background: transparent;
+          color: #999b9b;
+          border: none;
+          border-bottom: 1px solid #d6d5d5;
+        }
+      
+        input::placeholder {
+          color: #999b9b;
+        }
+      
+        option:focus {
+          border: none;
+        }
+      
+        option {
+          background: white;
+          border: none;
+        }
+      
+        .checkbox input {
+          margin: 0 10px 0 0;
+          vertical-align: middle;
+        }
+      
+        .checkbox a {
+          color: #26a9e0;
+        }
+      
+        .checkbox a:hover {
+          color: #85d6de;
+        }
+      
+        .card-quotes {
+          color: white;
+          text-align: start;
+          margin-left: 100px;
+          font-size: 18px;
+        }
+      
+        ul {
+          list-style: none;
+          line-height: 50px;
+        }
+      
+        ul li:before {
+          content: '\2714\0020';
+          color: #e03a3c;
+        }
+      
+        .btn-item,
+        button {
+          padding: 10px 5px;
+          margin-top: 20px;
+          border-radius: 5px;
+          border: none;
+          background: #e03a3c;
+          text-decoration: none;
+          font-size: 15px;
+          font-weight: 400;
+          color: #fff;
+        }
+      
+        .btn-item {
+          display: inline-block;
+          margin: 20px 5px 0;
+        }
+      
+        button {
+          width: 15%;
+        }
+      
+        button:hover,
+        .btn-item:hover {
+          background: black;
+        }
+        .popup-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            color: white;
+            padding: 50px;
+            border-radius: 5px;
+            display: none;
+        }
+      
+        @media (min-width: 568px) {
+      
+          html,
+          body {
+            height: 100%;
+          }
+      
+          .main-block {
+            flex-direction: row;
+          }
+      
+          .left-part,
+          form {
+            flex: 1;
+          }
+        }
+      </style>
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="left-part">
+      <i class="fas fa-graduation-cap" style="color: #e03a3c;"></i>
+      <h1>Register to get intern</h1>
+      <p style="font-size: 18px;">Ready to unleash your potential? Register for our internship program today!</p>
+      <div class="card-quotes">
+        <ul>
+          <li>Work hard, play hard</li>
+          <li>Find your tribe</li>
+          <li>Level Up Your Skills</li>
+          <li>Learn Fast, Grow Faster</li>
+          <li>Become the best version of yourself</li>
+        </ul>
       </div>
-      <form action="/register" method="POST">
-        <div class="title">
-          <i class="fas fa-pencil-alt"></i> 
-          <h2>Register here</h2>
-        </div>
-        <div class="info">
-          <input class="fname" type="text" name="fname" placeholder="Full name" required>
-          <input type="text" name="email" placeholder="Email" required>
-          <input type="text" name="phone_number" placeholder="Phone number" required>
-          <!-- <input type="password" name="password" placeholder="Password" required> -->
-          <select name="course_type" >
-            <option value="course-type" selected>Course type*</option>
-            <option value="app-development">App Development</option>
-            <option value="uiux-development">UIUX Development</option>
-            <option value="web-developmetn">Web Development</option>
-            <option value="digital-marketing">Digital Marketing</option>
-          </select>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="checkbox" required><span style="color: #999b9b" >I agree to the <a href="privacypolicy.html">Privacy Policy.</a></span>
-        </div>
-        <p>{{err}}</p>
-        <button type="submit" href="/">Submit</button>
-      </form>
-
     </div>
-  </body>
+    <form action="/register" method="POST" onsubmit="handleSubmit(event,'/register')">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>Register here</h2>
+      </div>
+      <div class="info">
+        <input class="fname" type="text" name="fname" placeholder="Full name" required>
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="text" name="phone_number" placeholder="Phone number" required>
+        <select name="course_type">
+          <option value="course-type" selected>Course type*</option>
+          <option value="app-development">App Development</option>
+          <option value="uiux-development">UIUX Development</option>
+          <option value="web-developmetn">Web Development</option>
+          <option value="digital-marketing">Digital Marketing</option>
+        </select>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="checkbox" required><span style="color: #999b9b">I agree to the <a
+            href="privacypolicy.html">Privacy Policy.</a></span>
+      </div>
+    <div class="popup-message"></div>
+      <button type="submit" href="/">Submit</button>
+    </form>
+  </div>
+</body>
+
 </html>
