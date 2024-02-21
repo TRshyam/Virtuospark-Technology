@@ -32,23 +32,34 @@
   h6 {
     font-family: "Raleway", sans-serif;
   }
+/* 
+            bottom: 10px;
+            right: 10px;
+            position: fixed;
+            background: linear-gradient(to bottom, rgba(87, 189, 130, 0.9) 0%, rgba(87, 189, 130, 0.7) 50%, rgba(87, 189, 130, 0.9) 100%);
+            border: 1px solid #5FBF87;
+            border-radius: 15px;
+            -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.47);
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+            z-index: 9999;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 .popup-message {
-  display: none;
-  position: fixed;
-  z-index: -1;
-  bottom: 10px;
-  right: 5px;
-  margin: 20px;
-  transform: translateX(-50%);
-  padding: 30px;
-  border-radius: 10px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-  /* Glassy background */
-  backdrop-filter: blur(5px);
-  /* Adds a blur effect */
-  box-shadow: 0 0 10px rgba(66, 77, 190, 0.5);
-  /* Adds a subtle shadow */
+            bottom: 10px;
+              right: 10px;
+              position: fixed;
+              background: linear-gradient(to bottom, rgba(87, 189, 130, 0.9) 0%, rgba(87, 189, 130, 0.7) 50%, rgba(87, 189, 130, 0.9) 100%);
+              border: 1px solid #5FBF87;
+              border-radius: 15px;
+              -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.47);
+              padding: 20px;
+              font-size: 18px;
+              color: #333;
+              z-index: 9999;
+              display: none;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .alert-success {
