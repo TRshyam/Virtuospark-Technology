@@ -1,22 +1,42 @@
-<form class="eform" method="POST" action="/submit_form" id="statusMessage">
-    <div class="eform-group">
-        <input type="text" class="eform-control" placeholder="First Name" value="" name="first_name" />
+<section id="popup-background">
+    <div id="popup" class="container">
+        <i class="ri-close-circle-fill" type="button" style="float: right; font-size: 20px;"
+            onclick="toggleclose()"></i>
+        <div class="row">
+            <div class="col-md-6 explore-quotes">
+                <i class="ri-double-quotes-l"></i>
+                <p>Tired of endless searching? We curate connections that click. Register your business and find the
+                    ideal solution for your problems, effortlessly.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="eform-area">
+                    <div class="eform-inner">
+                        <h1 style="font-size: 25px; padding: 10px; color: black;">Welcome! Let's Explore</h1>
+                        <form class="eform" method="POST" action="/submit_form" id="statusMessage">
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="First Name" value=""
+                                    name="first_name" />
+                            </div>
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="Last Name" value=""
+                                    name="last_name" />
+                            </div>
+                            <div class="eform-group">
+                                <input type="phone" id="mobile_code" class="eform-control intlTelInput"
+                                    placeholder="Phone Number" name="phone_number">
+                            </div>
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="Email" name="email">
+                            </div>
+                            <button type="submit" class="btn form-submit">Submit</button><br>
+                            <span> By proceeding you agree to the
+                                <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy
+                                    Policy.</a>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="eform-group">
-        <input type="text" class="eform-control" placeholder="Last Name" value="" name="last_name" />
-    </div>
-    <div class="eform-group">
-        <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number"
-            name="phone_number">
-    </div>
-    <div class="eform-group">
-        <input type="text" class="eform-control" placeholder="Email" name="email">
-    </div>
-
-    
-
-    <button type="submit" class="btn form-submit">Submit</button><br>
-    <span> By proceeding you agree to the
-        <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy.</a>
-    </span>
-</form>
+</section>
