@@ -856,7 +856,10 @@ section {
 .tabs .nav-tabs {
   border: 0;
 }
-
+.tabs .img-fluid{
+  height: 400px;
+  width: 500px;
+}
 .tabs .nav-link {
   border: 1px solid #b9b9b9;
   padding: 15px;

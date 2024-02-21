@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <style>
       html, body {
-      height: 100%;
-      }
+  height: 100vh;
+}
       body, div, form, input, select { 
       padding: 0;
       margin: 0;
@@ -36,15 +36,16 @@
       margin: 0 0 0 8px;
       }
       .main-block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-      width: 100%;
-      height: 96.5%;
-      background: #fff;
-      }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    background: #fff;
+}
+
       .left-part, form {
         padding: 25px;
         height: 100%;
@@ -106,12 +107,16 @@
       }
       ul {
         list-style: none;
-        line-height: 50px;
+        line-height: 3vh;
       }
       ul li:before {
         content: '\2714\0020';
         color: #e03a3c;
       }
+
+
+
+      
       .btn-item, button {
       padding: 10px 5px;
       margin-top: 20px;
@@ -133,6 +138,22 @@
       button:hover, .btn-item:hover {
       background: black;
       }
+      button[type="submit"] {
+    width: 100%; /* Ensure the button takes full width */
+    padding: 10px; /* Adjust padding */
+    margin-top: 20px; /* Add space between the form and the button */
+    border: none;
+    border-radius: 5px;
+    background: #e03a3c;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #333;
+}
+
       @media (min-width: 768px) {
         html, body {
           min-height: 100%;
@@ -221,25 +242,24 @@
                 e.preventDefault();
            }
         });
+        
     </script> 
     
     
   </head>
   <body>
     <div class="main-block">
-      <div class="left-part">
+       <div class="left-part">
         <i class="fas fa-graduation-cap" style="color: #e03a3c;"></i>
         <h1>Register to get intern</h1>
         <p style="font-size: 18px;">Ready to unleash your potential? Register for our internship program today!</p>
+        
         <div class="card-quotes">
           <ul>
             <li>Work hard, play hard</li>
             <li>Find your tribe</li>
             <li>Level Up Your Skills</li>
             <li>Learn Fast, Grow Faster</li>
-            <li>Become the best version of yourself</li>
-          </ul>
-          
         </div>
       </div>
       <form name="myForm" action="/" onsubmit="return validateform()">
@@ -278,7 +298,7 @@
               </div>
             </div>
         </div>  
-      </section> 
+      </section>
     </div>
   </body>
 </html>
