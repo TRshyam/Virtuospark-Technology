@@ -32,7 +32,7 @@ def create_db_client(data):
     return 'Registered Successfully'
 
   else:
-    return "None"
+    return "Registered SuccessfullyRegistered Successfully"
 
 def create_db_candidates(data):
   print(data)
