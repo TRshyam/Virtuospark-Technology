@@ -2225,16 +2225,15 @@ explore-popup */
   position: fixed;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
+  text-align: center;
 }
-
-
 
 #popup
 {
   margin:auto;
   background-color: white;
   padding: 20px;
-  width: 70%;
+  width: 50%;
 }
 
 .explore-quotes{
