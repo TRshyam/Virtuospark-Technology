@@ -2241,13 +2241,8 @@ explore-popup */
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
-.explore-quotes i{
-  font-size: 60px;
-  opacity: 0.5;
-}
-
 
 .eform-area {
   background-color: transparent;
@@ -2264,7 +2259,7 @@ explore-popup */
   width: 100%;
   height: auto;
   padding: 15px 19px;
-  font-size: 1rem;
+  font-size: 13px;
   line-height: 1.4;
   color: #475F7B;
   background-color: #FFF;
