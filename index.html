@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Virtuospark</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script>
+    function toggle()
+        {
+          document.getElementById("popup-background").style.display="block";
+        }
+    function toggleclose()
+    {
+      document.getElementById("popup-background").style.display="none";
+    }
+    function aboutscrool()
+    {
+        const additionalContent=document.getElementById("additional-content");
+        if (additionalContent) {
+        console.log(additionalContent.style.display === "none")
+        additionalContent.style.display =
+          additionalContent.style.display === "none" ? "block" : "none";
+        }
+        document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
+    }
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    window.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.key === 'u')) {
+            e.preventDefault();
+       }
+    });
+
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center"> 
+      <h1 class="logo me-auto">
+        <a href="index.html">Virtuospark<span>.</span></a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#clients">Tech-Stack</a></li> -->
+          <li><a class="nav-link scrollto " href="#portfolio">Insights</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+    <script>
+      
+          
+    </script>
+  </header><br>
+  <!-- End Header -->
+  <!-- <section id="progress-section" class="progress-section">
+    <div id="progress-line" class="progress-line">
+      <div id="progress" class="progress" style="width: 0%;"></div>
+    </div>
+  </section> -->
+  <!-- <script>
+    window.addEventListener("scroll", function () {
+      // Get the height of the entire document
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      
+      // Calculate the current scroll position as a percentage
+      const scrollPercentage = (window.scrollY / docHeight) * 100;
+      
+      // Update the width of the progress bar
+      document.getElementById("progress").style.width = scrollPercentage + "%";
+    });
+   
+  </script> -->
+    
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="display: flex; flex-direction: column; ">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <div class="row" style="margin-top: 100px;">
+        <div class="col-xl-6">
+          <h1>We decode your needs, craft your success</h1>
+          <h2 style="line-height: 40px;">Transform your work, protect your data.<br> Unmatched power, unwavering trust.</h2>
+          <a class="btn-get-started scrollto" onclick="toggle()" style="cursor: pointer;">Explore</a>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  <!--explore section-->
+  <section id="popup-background">
+    <div id="popup">
+      <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()"></i>
+      <div style="display: flex;flex-direction: column;">
+        <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Let's Explore</h1>
+        <div class="explore-quotes">
+          <p>Tired of endless searching? We curate connections that click. Register your business and find the ideal solution for your problems, effortlessly.</p>
+        </div>
+        <div class="eform-area">
+          <div class="eform-inner">
+            <form class="eform">
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="First Name" value="" required/>
+              </div>
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="Last Name" value="" required/>
+              </div>
+              <div class="eform-group">
+                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name" required>
+              </div>
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="Email" name="name" required>
+              </div>
+              <button type="submit" class="btn form-submit">Submit</button><br>
+              <span> By proceeding you agree to the 
+                <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy.</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <section id="popup-background">
+    <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+        <div style="display: flex;flex-direction: row;">
+          <div style="width: 50%;" class="explore-quotes">
+            <p>Thankyou</p>
+          </div>
+        </div>
+    </div>  
+  </section>
+  <!--end explore section-->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      
+      <div class="container" data-aos="zoom-in">
+        <div class="section-title">
+          <h2>Tech-Stack</h2>
+        </div>
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/reactjs.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients//django-vector-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/flask-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/mongo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/MySQL1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/reactnative.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/figma-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tensorflow-logo.png" class="img-fluid" alt=""></div>          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Your vision, our blueprint: Tools that speak your language.</h3>
+              <p>
+                Where ideas spark, and problems vanish, unleash your software potential with VIRTUOSPARK.
+              </p>
+              <a  style="cursor: pointer;" class="about-btn" onclick="aboutscrool()"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class='bx bx-brain'></i>
+                  <h4>Young brains</h4>
+                  <p>Supercharged engines, fueled by the curiosity of young minds. We secure, accessible tools to ignite their imagination and help build amazing things.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class='bx bx-bulb' style='color:#e03a3c' ></i>
+                  <h4>Ideal solution</h4>
+                  <p>Stop settling our ideal solution unlocks your potential, fitting seamlessly. Discover the satisfaction of coding expertise.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class='bx bx-code'></i>
+                  <h4>Trustworthy</h4>
+                  <p>Our team boasts a proven track record of successful projects delivered on time and within budget.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class='bx bx-shield'></i>
+                  <h4>Security</h4>
+                  <p>VIRTUOSPARK provides secure solutions, encrypting your data at rest and in transit for complete peace of mind.</p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+    <section id="additional-content" class="about" style="display: none;" >
+      <div class="container" data-aos="fade-up">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
+    
+          <!-- Vision Box -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="vision-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Vision</h4>
+                  <p>To revolutionize the software industry by empowering businesses of all sizes to leverage cutting-edge technology to achieve their unique goals and aspirations. We envision a future where software is not just a tool, but a strategic partner, seamlessly integrated into every aspect of an organization's operations, efficiency and growth.</p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Mission Box -->
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="mission-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Mission</h4>
+                  <p>Our mission is to provide exceptional, client-centric software solutions that are tailored to each client's specific needs and challenges.We achieve this through a collaborative approach, where we work closely with our clients to understand their vision, develop innovative solutions, and deliver projects on time and within budget. </p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Motto Box -->
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="motto-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Motto</h4>
+                  <p>Our motto goes beyond simply creating software or offering services. We're driven by a deep-seated desire to unleash the potential that lies within individuals, businesses, and communities. We believe that technology is a powerful tool that can be harnessed to empower innovation and drive positive change in the world.</p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="70" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="168" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="582" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hours Of Support</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Hard Workers</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Tabs Section ======= -->
+    <section id="tabs" class="tabs">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="ri-gps-line"></i>
+              <h4 class="d-none d-lg-block">Awesome Support</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="ri-body-scan-line"></i>
+              <h4 class="d-none d-lg-block">Truly Multipurpose</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="ri-sun-line"></i>
+              <h4 class="d-none d-lg-block">Easy to customize</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="ri-store-line"></i>
+              <h4 class="d-none d-lg-block">Responsive & Clean Design</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                <h3>Expect clear communication and responsive service.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  We believe support shouldn't be a frustrating experience. That's why we offer crystal-clear communication and lightning-fast responses, ensuring your questions are answered before they turn into full-blown storms.
+                  Think of us as your personal support champions, dedicated to understanding your needs and resolving your issues efficiently. No more waiting in endless email queues or getting bounced around like a lost package. Clear communication from the get-go means you know exactly what's happening every step of the way.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>We craft solutions that effortlessly bend to your will.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Truly Multipurpose: Bending Solutions to Your Will Forget the days of rigid, one-size-fits-all products. Your needs are unique, and your solutions should be too. We don't just build software, we craft flexible tools that bend to your will. Think of us as architects, meticulously designing platforms and applications that seamlessly adapt to your evolving vision. Whether you're a nimble startup or an established enterprise, our solutions scale and shift alongside you. Need to add new features? No problem. Our modular design allows seamless integration and customization, ensuring your tools always align with your goals.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid" >
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Our tools and services are built with easy customization.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Our commitment to easy customization isn't just a feature, it's a philosophy. he business landscape is dynamic, and your needs evolve. Our tools are built to keep pace. With intuitive interfaces and drag-and-drop functionality, you can effortlessly adapt workflows, reports, and dashboards to seamlessly reflect your changing priorities. Let everyone join the innovation journey. Our user-friendly customization features don't require coding expertise. Empower your team members to tailor their experiences, boosting efficiency and ownership.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Creating good design and impressive your audience.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  In today's digital landscape, attention is currency. To capture yours truly, design needs to be both responsive and clean.  Imagine your audience engaging with your content across diverse devices – desktops, tablets, and mobiles. A responsive design seamlessly adapts, delivering an optimal experience regardless of the screen size. This isn't just about aesthetics; it's about accessibility and respect for your audience's time. They shouldn't have to pinch, zoom, or scroll excessively to access your message. Visual clutter equals cognitive overload. A clean design prioritizes clarity and hierarchy, guiding the viewer's eye effortlessly towards the information you want them to see.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/tabs-4.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Tabs Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg ">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <h4>Unleash Your Digital Potential at VIRTUOSPARK</h4></br>
+          <p>We're not just passionate about technology; we're pioneers who envision a future where digital solutions seamlessly integrate into every aspect of life.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class='bx bx-devices'></i>
+              <h4>Web Development</h4>
+              <p>We weave your vision into websites that captivate and convert. Our expert developers build powerful, secure, and scalable online experiences that propel your brand forward. Think of us as digital architects, transforming your dreamed draft into a seamless and impactful online presence.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class='bx bx-mobile'   ></i>
+              <h4>App Development</h4>
+              <p>Turn your mobile ideas into engaging apps that simplify lives and connect users. We excel in crafting intuitive and beautiful interfaces that deliver exceptional user experience and prioritize seamless navigationand an overall experience that delights and engages your users</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class='bx bx-edit'></i>
+              <h4>UI/UX Design</h4>
+              <p>Our UI/UX designers are storytellers, creating interfaces that connect with users and don't just design interfaces, we design emotions. Our UI/UX experts create visually stunning and user-friendly experiences that resonate with your audience and drive engagement.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class='bx bx-globe'></i>
+              <h4>Hosting</h4>
+              <p>Rest easy knowing your website is in safe hands. We offer reliable, secure, and scalable hosting solutions with lightning-fast performance to keep your online presence thriving. Experience blazing-fast loading speeds with our optimized servers and advanced caching technologies</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i class='bx bx-podcast'></i>
+              <h4>Marketing</h4>
+              <p>Amplify your digital voice. Our marketing experts craft data-driven strategies that attract your ideal audience and ignite brand awareness. We help you connect with your target market and achieve your marketing goals.</p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+              <i class='bx bx-building'></i>
+              <h4>PC Building</h4>
+              <p>Don't settle for pre-built limitations. We custom-build high-performance PCs tailored to your specific needs and budget, whether you're a gaming enthusiast, creative professional, or business powerhouse.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Insights</h2>
+          <p>A glimpse into the future we're actively building, ensuring your journey.</p>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Embracing The Immersive</h4>
+                <p>We'll guide you in the captivating world of augmented reality (AR) and virtual reality (VR), crafting solutions that blur the lines between the physical and digital, fostering deeper engagement and unforgettable experiences.</p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-1" class="btn-blog">Click Me!
+                  </a>
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Beyond Websites</h4>
+                <p>We're actively exploring the potential of web3 technologies like decentralisation and blockchain to create interactive, user-owned experiences that blur the lines between the physical and digital worlds.</p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-2" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>AI-powered Marketing</h4>
+                <p> Personalized marketing campaigns driven by AI and automation will deliver highly targeted messages to specific audience segments, maximizing campaign effectiveness.</p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-3" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Cloud Integration</h4>
+                <p>PCs will seamlessly integrate with cloud services, offering on-demand storage, processing power, and software access for enhanced flexibility and performance.
+                </p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-4" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Center Stage</h4>
+                <p>We believe in harnessing technology for good. Expect eco-friendly solutions that minimize our environmental impact, from energy-efficient hosting to sustainable hardware choices.</p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-5" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Hyper-Personalize</h4>
+                <p>We'll leverage the power of AI and imagine websites that intuitively adapt to preferences, apps that anticipate your needs, and marketing campaigns that resonate on a deeply personal level.
+                </p><br>
+                <div class="portfolio-links">
+                  <a href="blog.html #blog-content-6" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Beyond words, beyond expectations, discover real experiences that showcase the power of our work and dive into testimonials that speak volumes about our work.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/char1.jpeg" class="testimonial-img" alt="">
+                  <h3>Rohini</h3>
+                  <h4>Developer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Working with VIRTUOSPARK felt collaborative and supportive and allowed me to showcase their skills and expectations.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/char5.jpeg" class="testimonial-img" alt="">
+                  <h3>Udhaya Kumar</h3>
+                  <h4>Business Analyst</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    They had clear communication and a collaborative approach, which made my job as a business analyst much easier. 
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/char2.jpeg" class="testimonial-img" alt="">
+                  <h3>Rohan Kumar</h3>
+                  <h4>Developer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    The detailed breakdown of functionalities in the developer brief enabled me to quickly build a high-performing Flutter app
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/char3.jpeg" class="testimonial-img" alt="">
+                  <h3>Gowsalya</h3>
+                  <h4>Freelancer</h4>
+                  <p> 
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Their clear communication and teamwork expertise allowed them to deliver a web page that exceeded our expectations.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/char6.jpeg" class="testimonial-img" alt="">
+                  <h3>Krithika</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Thanks to the collaborative spirit and bounced ideas off each other and pushed each other to deliver the best app.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Snapshot</h2>
+          <p>Bridging the gap between dreams and digital reality</p>
+        </div>
+    
+        <div class="row">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-booklet-fill"></i>
+                <h3 style="font-size: 20px;">Overview</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>VIRTUOSPARK, we're not just coders, we're creators and code whisperers. We speak your language, understanding your unique needs and challenges. Forget cookie-cutter solutions - we craft bespoke software masterpieces that fit like a glove, empowering you to achieve what others only dream of.</p>
+              </div>
+            </div>
+          </div>
+ 
+    
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-questionnaire-fill"></i>
+                <br>
+                <h3 style="font-size: 20px;">
+                  Why VIRTUOSPARK?
+                  </h3>
+              </div>
+              <div class="flip-card-back">
+                <p>VIRTUOSPARK, we empower young minds to spark their tech potential with safe, secure, and engaging tools. We believe nurturing the next generation is key to a brighter future, setting us apart with our genuine commitment. Don't sweat the tech headaches - our highly secured maintenance and transparent communication ensure you can focus on your business, knowing your future tech leaders are in good hands.
+                  .</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-shake-hands-fill"></i>
+                <br>
+                <h3 style="font-size: 20px;">Commitment 
+                </h3>
+              </div>
+              <div class="flip-card-back">
+                <p>We believe in unlocking the potential within individuals, businesses, and communities. We achieve this through tailored software solutions, accessible tools for young minds, and fostering a culture of innovation and learning. We're not just creating software; we're building a brighter future where technology empowers everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+    
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <ul class="faq-list accordion" data-aos="fade-up">
+
+          <li>
+            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">What makes your company different from your competitors?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Teamwork is our superpower! We go the extra mile to ensure you achieve your goals, fueled by passion, agility, and a smile. Together, we tackle any challenge, turning them into triumphs.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">What are your core values and how do they influence your work?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Values aren't just words on a wall, they're the compass guiding our ship. Passion, collaboration, integrity, and client-centricity - join us on a voyage to remarkable.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">Do you provide ongoing support after the project is completed?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Yes, we certainly do! We understand that your needs may evolve after the project is complete, and we're here to support you every step of the way. Whether it's maintenance, updates, or new functionalities, we're just a call away.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">Do you offer any guarantees or warranties for your services? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                We'll achieve SEO strategies, engaging content creation, and website performance enhancements and continue working with you until the targets are met, within reason and excluding external factors outside our control.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">What specific services or solutions do you offer?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Requires students to be enrolled or completed in a degree program. An average GPA is required, though the specific threshold may vary by program.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">What kind of training and support will I receive?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Creating visually appealing and user-friendly websites that adapt to different screen sizes, Building intuitive and engaging mobile apps that deliver exceptional user experiences and  Creating a consistent brand identity across all touchpoints, including websites, marketing materials, and social media.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Not just colleagues, but a collective force for innovation. Meet the minds behind the magic.</p>
+          
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Jagadeesh</h4>
+                <span>Founder & CEO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Om Sri Eswar</h4>
+                <span>CTO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/team/team-9.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Shyam</h4>
+                <span>Vice President</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-8.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Sowmiyapriya</h4>
+                <span>Product Manager</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Ready to explore? From pricing inquiries to personalized demos, we're here to guide you. Connect for answers & demos tailored to your needs.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p><B>Head Office:</B> 19/31a, odakadu, narayana nagar, Amman nagar, <br>  Kumarapalaym, Tamil Nadu - 638183.</p>
+                  <p><B>Branch:</B> 33, P.P.Plaza, Palanimalai Street, Kottai,Erode-638001.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@virtuospark.com</p>
+                  <p>support@virtuospark.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 81100 30751<br>+91 88839 91745</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Contact Number" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+    <section id="popup-background">
+      <div id="popup">
+          <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+          <div style="display: flex;flex-direction: row;">
+            <div style="width: 50%;" class="explore-quotes">
+              <p>Thankyou</p>
+            </div>
+          </div>
+      </div>  
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Virtuospark<span>.</span></h3>
+            <p>
+              19/31a, odakadu, narayana nagar,<br> Amman nagar, Kumarapalaym,<br> Tamil Nadu - 638183<br>
+              <strong>Phone:</strong> +91 8110030751<br>
+              <strong>Email:</strong> info@virtuospark.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Insights</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="termofservice.html">Terms of Service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacypolicy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a>Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>App Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>UI/UX Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>Hosting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>PC Building</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Be the first to know about exciting news & updates.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+            <div>
+              <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Warning: This is a warning alert!</span>
+                <div class="close-btn">
+                   <span class="fas fa-times"></span>
+                </div>
+             </div>
+            </div>
+            
+          </div>
+          <section id="popup-background">
+            <div id="popup">
+                <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+                <div style="display: flex;flex-direction: row;">
+                  <div style="width: 50%;" class="explore-quotes">
+                    <p>Thankyou</p>
+                  </div>
+                </div>
+            </div>  
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4 d-flex justify-content-center align-items-center">
+      <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+              &copy; Copyright <strong><span> Virtuospark</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+              <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+          </div>
+      </div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+          <ul>
+              <li class="item">
+                  <a href="https://x.com/virtuospark?t=nD6vMrFYNbxk0HoKobqiDQ&s=09" class="twitter"><i class="icon bx bxl-twitter"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.facebook.com/profile.php?id=61556189139151&mibextid=rS40aB7S9Ucbxw6v" class="facebook"><i class="icon bx bxl-facebook"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.instagram.com/virtuospark?igsh=NDFyYmVvODlseHZk" class="instagram"><i class="icon bx bxl-instagram"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.linkedin.com/in/virtuospark-technologies-1532152b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="icon bx bxl-linkedin"></i></a>
+              </li>
+              <li class="item">
+                  <a target="_blank" href="https://wa.me/7871007741" class="youtube"><i class="icon bx bxl-whatsapp"></i></a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  </footer><!-- End Footer -->
+  <div id="scroll-Top">
+    <a href="#" class="return-to-top back-to-top d-flex align-items-center justify-content-center">
+      <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+    </a>
+  </div>
+  
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
