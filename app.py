@@ -23,11 +23,12 @@ def register():
     if request.method == 'POST':
         try:
             user_data = {
-                "first_name": request.form['fname'],
+                "name": request.form['name'],
                 "email": request.form['email'],
-                "phone_number": request.form['phone_number'],
-                "course_type": request.form['course_type']
+                "phone_number": request.form['phone'],
+                "course_type": request.form['course']
             }
+            print(user_data)
 
             message = fb.create_db_candidates(user_data)
             return message
@@ -75,10 +76,17 @@ def contact_form():
         if request.method=='POST':
             message={
                 "name":request.form["name"],
+                "email":request.form["email"],
                 "number":request.form["number"],
                 "message":request.form["message"]
         }
-            se.clients_mail(message)
+            print(message)
+            print(message)
+            print(message)
+            print(message)
+            print(message)
+            print(message)
+            se.send_mes(message)
             
         return 'OK'
 

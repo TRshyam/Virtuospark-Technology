@@ -88,20 +88,7 @@
 
   <!-- ======= Header ======= -->
 
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center"> 
-      <h1 class="logo me-auto"><a href="/">Virtuospark<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
-    {% include 'navbar.html' %}
-
-
-    </div>
-    <script>
-      
-          
-    </script>
-  </header><br>
+{%include "navbar.html"%}
   <!-- End Header -->
   <!-- <section id="progress-section" class="progress-section">
     <div id="progress-line" class="progress-line">
@@ -168,111 +155,12 @@
     </section><!-- End Clients Section -->
 
     <!-- ======= About Section ======= -->
-<section id="about" class="about section-bg">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row no-gutters">
-      <div class="content col-xl-5 d-flex align-items-stretch">
-        <div class="content">
-          <h3>Your vision, our blueprint: Tools that speak your language.</h3>
-          <p>
-            Where ideas spark, and problems vanish, unleash your software potential with VIRTUOSPARK.
-          </p>
-          <a style="cursor: pointer;" class="about-btn" onclick="aboutscrool()"><span>About us</span> <i
-              class="bx bx-chevron-right"></i></a>
-        </div>
-      </div>
-      <div class="col-xl-7 d-flex align-items-stretch">
-        <div class="icon-boxes d-flex flex-column justify-content-center">
-          <div class="row">
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class='bx bx-brain'></i>
-              <h4>Young brains</h4>
-              <p>Supercharged engines, fueled by the curiosity of young minds. We secure, accessible tools
-                to ignite their imagination and help build amazing things.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class='bx bx-bulb' style='color:#e03a3c'></i>
-              <h4>Ideal solution</h4>
-              <p>Stop settling our ideal solution unlocks your potential, fitting seamlessly. Discover the
-                satisfaction of coding expertise.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-              <i class='bx bx-code'></i>
-              <h4>Trustworthy</h4>
-              <p>Our team boasts a proven track record of successful projects delivered on time and within
-                budget.</p>
-            </div>
-            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-              <i class='bx bx-shield'></i>
-              <h4>Security</h4>
-              <p>VIRTUOSPARK provides secure solutions, encrypting your data at rest and in transit for
-                complete peace of mind.</p>
-            </div>
-          </div>
-        </div><!-- End .content-->
-      </div>
-    </div>
-
-  </div>
-</section>
+{%include 'about.html'%}
 
 
 
 <!-- End About Section -->
-    <section id="additional-content" class="about" style="display: none;" >
-      <div class="container" data-aos="fade-up">
-        <div style="display: flex; justify-content: space-around; align-items: center;">
-    
-          <!-- Vision Box -->
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="vision-box card1">
-                <div class="content-box" style="padding: 10px;">
-                  <h4 style="font-weight: bold;">Our Vision</h4>
-                  <p>To revolutionize the software industry by empowering businesses of all sizes to leverage cutting-edge technology to achieve their unique goals and aspirations. We envision a future where software is not just a tool, but a strategic partner, seamlessly integrated into every aspect of an organization's operations, efficiency and growth.</p>
-                  <div class="go-corner" href="#">
-                    <div class="go-arrow"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Mission Box -->
-          <div class="row">
-            <div class="col-lg-12 mt-4">
-              <div class="mission-box card1">
-                <div class="content-box" style="padding: 10px;">
-                  <h4 style="font-weight: bold;">Our Mission</h4>
-                  <p>Our mission is to provide exceptional, client-centric software solutions that are tailored to each client's specific needs and challenges.We achieve this through a collaborative approach, where we work closely with our clients to understand their vision, develop innovative solutions, and deliver projects on time and within budget. </p>
-                  <div class="go-corner" href="#">
-                    <div class="go-arrow"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Motto Box -->
-          <div class="row">
-            <div class="col-lg-12 mt-4">
-              <div class="motto-box card1">
-                <div class="content-box" style="padding: 10px;">
-                  <h4 style="font-weight: bold;">Our Motto</h4>
-                  <p>Our motto goes beyond simply creating software or offering services. We're driven by a deep-seated desire to unleash the potential that lies within individuals, businesses, and communities. We believe that technology is a powerful tool that can be harnessed to empower innovation and drive positive change in the world.</p>
-                  <div class="go-corner" href="#">
-                    <div class="go-arrow"></div>
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </div>
-      </div>
-    </section>
+
     
     
     
@@ -977,104 +865,9 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Virtuospark<span>.</span></h3>
-            <p>
-              19/31a, odakadu, narayana nagar,<br> Amman nagar, Kumarapalaym,<br> Tamil Nadu - 638183<br>
-              <strong>Phone:</strong> +91 8110030751<br>
-              <strong>Email:</strong> info@virtuospark.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Insights</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="termofservice.html">Terms of Service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacypolicy.html">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a>Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>App Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>UI/UX Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>Hosting</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a>PC Building</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Be the first to know about exciting news & updates.</p>
-           
-
-               {%include 'sub.html'%}
-
-
-            <div>
-              <div class="alert hide">
-                <span class="fas fa-exclamation-circle"></span>
-                <span class="msg">Warning: This is a warning alert!</span>
-                <div class="close-btn">
-                   <span class="fas fa-times"></span>
-                </div>
-             </div>
-            </div>
-            
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Virtuospark</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-        </div>
-      </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <ul>
-          <li class="item">
-            <a href="https://twitter.com/virtuospark" class="twitter"><i class="icon bx bxl-twitter"></i></a>
-          </li>
-          <li class="item">
-            <a href="#" class="facebook"><i class="icon bx bxl-facebook"></i></a>
-          </li>
-          <li class="item">
-            <a href="https://www.instagram.com/virtuospark/" class="instagram"><i class="icon bx bxl-instagram"></i></a>
-          </li>
-          <li class="item">
-            <a href="#" class="linkedin"><i class="icon bx bxl-linkedin"></i></a>
-          </li>
-          <li class="item">
-            <a href="https://wa.me/7871007741" class="Whatsapp"><i class="icon bx bxl-whatsapp"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+  {%include "footer.html"%}
+<!-- End Footer -->
   <div id="scroll-Top">
     <a href="#" class="return-to-top back-to-top d-flex align-items-center justify-content-center">
       <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>

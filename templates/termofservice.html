@@ -9,54 +9,47 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <link href="{{ url_for('static', filename='assets/img/logo.png') }}" rel="icon">
+  <!-- <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> -->
+
   <!-- Favicons -->
-  <link href="static/assets/img/favicon.png" rel="icon">
-  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/img/logo.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-  
-  <!-- Template Main CSS File -->
-  <link href="static/css/style.css" rel="stylesheet">
-  
-</head>
 
+  <!-- Template Main CSS File -->
+  <!-- <link href="static\css\style.css" rel="stylesheet"> -->
+  <link href="{{ url_for('static', filename='assets/css/style.css') }}" rel="stylesheet">
+
+  
+
+  <script src='static/assets/vendor/popup/regpopup.js'></script>
+
+</head>
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html">Virtuospark<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="static/assets/img/logo.png" alt=""></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto " href="index.html #hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html #about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html #services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html #team">Team</a></li>
-          <li><a class="nav-link scrollto " href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
-          <li><a class="nav-link scrollto" href="index.html #contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+  {%include  'navbar.html' %}
+<!-- End Header -->
 
   <main id="main">
 
@@ -65,7 +58,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li>Terms of Services</li>
         </ol>
         <h2>Terms of Services</h2>
@@ -75,7 +68,7 @@
     </section><!-- End Breadcrumbs -->
 
     <section class="container">
-      <div class="termsofservice" data-aos="fade-up">
+      <div class="termsofservice">
         <h1>Terms of Service Agreement for VirtuoSpark</h1>
         <p>This Agreement ("<b>Agreement</b>") establishes the terms between you or the represented entity (referred to as "<b>you</b>" or "<b>your</b>") and VirtuoSpark, governing your comprehensive use of the VirtuoSpark suite of online business productivity and collaboration software.</p>
         <h1>Sections of this Agreement:</h1>
@@ -137,48 +130,32 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container" style="display: flex; justify-content: center; text-align: center;">
-        <div class="row">
+    <footer id="footer">
+    
+      <div class="footer-top">
+        <div class="container" style="display: flex; justify-content: center; text-align: center;  align-items:end;">
+          <div class="row">
             <p>Powered by</p>
-            <h1 class="logo me-auto"><a href="index.html">Virtuospark<span>.</span></a></h1>
+            <h1 class="logo me-auto"><a href="/">Virtuospark<span>.</span></a></h1>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Virtuospark</span></strong>. All Rights Reserved
+    
+      <div class="container d-md-flex py-4">
+    
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Virtuospark</span></strong>. All Rights Reserved
+          </div>
         </div>
+
+        <!-- social Elements -->
+        {%include 'socialele.html' %}
+        <!-- social Elements -->
+      
       </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <ul>
-          <li class="item">
-            <a href="#" class="twitter"><i class="icon bx bxl-twitter"></i></a>
-          </li>
-          <li class="item">
-            <a href="#" class="facebook"><i class="icon bx bxl-facebook"></i></a>
-          </li>
-          <li class="item">
-            <a href="https://www.instagram.com/virtuospark?igsh=NDFyYmVvODlseHZk" class="instagram"><i class="icon bx bxl-instagram"></i></a>
-          </li>
-          <li class="item">
-            <a href="#" class="linkedin"><i class="icon bx bxl-linkedin"></i></a>
-          </li>
-          <li class="item">
-            <a href="#" class="youtube"><i class="icon bx bxl-whatsapp"></i></a>
-          </li>
-        </ul>
-        
-                    
-        
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    </footer>
+<!-- End Footer -->
 
   <div id="scroll-Top">
     <a href="#" class="return-to-top back-to-top d-flex align-items-center justify-content-center">

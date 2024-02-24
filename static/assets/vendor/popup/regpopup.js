@@ -1,9 +1,11 @@
 function showPopupMessage(message, type = 'success') {
     console.log(message+"_____________________");
     var popupMessage = document.querySelector('.popup-message');
-    console.log(popupMessage)
-    console.log(popupMessage)
-    console.log(popupMessage)
+    console.log(popupMessage+"class")
+    console.log(popupMessage+"class")
+    console.log(popupMessage+"class")
+    console.log(popupMessage+"class")
+    
     popupMessage.innerHTML = message;
     popupMessage.className = 'popup-message alert-' + type;
     popupMessage.style.display = 'block';
@@ -13,6 +15,10 @@ function showPopupMessage(message, type = 'success') {
         popupMessage.style.display = 'none';
     }, 5000);
 }
+
+
+
+
 
 function handleSubmit(event, endpoint) {
     event.preventDefault();
@@ -35,6 +41,11 @@ function handleSubmit(event, endpoint) {
             console.log(data);
             console.log(data+"this is data");
             // Display the data in a pop-up message
+            console.log(data,'success');
+            console.log(data,'success');
+            console.log(data,'success');
+            console.log(data,'success');
+            console.log(data,'success');
             showPopupMessage(data, 'success');
         }
     })

@@ -51,7 +51,7 @@ def create_db_candidates(data):
         return "Already Registered"
 
     # Generate a unique ID for the new client
-    new_candidate_id =data['first_name']+str(uuid.uuid4())
+    new_candidate_id =data['name']+str(uuid.uuid4())
     new_candidate_id = new_candidate_id.replace(".", "-")
 
     print(new_candidate_id)
@@ -82,6 +82,6 @@ def SubscribeList(email):
 
 
 
-m={'first_name': 'SHYAM', 'last_name': 'T.R', 'email': 't.r.shyam0007@gmail.com', 'phone_number': '07448384181'}
-print(create_db_candidates(m))
+# m={'first_name': 'SHYAM', 'last_name': 'T.R', 'email': 't.r.shyam0007@gmail.com', 'phone_number': '07448384181'}
+# print(create_db_candidates(m))
 # create_db_client()
