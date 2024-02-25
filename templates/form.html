@@ -11,17 +11,18 @@
                 <div class="eform-inner">
                         <form method="POST" action="/submit_form" onsubmit="handleSubmit(event, '/submit_form')">
                             <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="First Name" value="" name="first_name" />
+                                <input type="text" class="eform-control" placeholder="First Name" value="" name="first_name" required />
                             </div>
                             <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Last Name" value="" name="last_name" />
+                                <input type="text" class="eform-control" placeholder="Last Name" value="" name="last_name" required />
                             </div>
+<div class="eform-group">
+    <!-- <input type="number" id="mobile_code"  maxlength="10" class="eform-control intlTelInput" placeholder="Phone Number"
+        name="phone_number" required> -->
+        <input type="tel" class="eform-control" id="phone_number" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}"  title="Enter a valid 10-digit phone number" maxlength="10" required>
+</div>
                             <div class="eform-group">
-                                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number"
-                                    name="phone_number">
-                            </div>
-                            <div class="eform-group">
-                                <input type="text" class="eform-control" placeholder="Email" name="email">
+                                <input type="email" class="eform-control" placeholder="Email" name="email" required>
                             </div>
                             <div class="popup-message"></div>
                         

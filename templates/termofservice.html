@@ -13,14 +13,11 @@
   <!-- <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon"> -->
 
   <!-- Favicons -->
-<<<<<<< HEAD:templates/termofservice.html
   <!-- <link href="assets/img/logo.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
-=======
   <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
->>>>>>> origin/main:termofservice.html
 
   <!-- Google Fonts -->
   <link
@@ -40,8 +37,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
-<<<<<<< HEAD:templates/termofservice.html
-=======
+
   
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -59,7 +55,6 @@
     });
     </script>
 </head>
->>>>>>> origin/main:termofservice.html
 
   <!-- Template Main CSS File -->
   <!-- <link href="static\css\style.css" rel="stylesheet"> -->
@@ -73,32 +68,34 @@
 <body>
 
   <!-- ======= Header ======= -->
-<<<<<<< HEAD:templates/termofservice.html
-  {%include  'navbar.html' %}
-<!-- End Header -->
-=======
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
       <h1 class="logo me-auto">
-        <a href="index.html"><img src="assets/img/logo.png" alt="logo">Virtuospark<span>.</span></a>
-      </h1>      <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="/">Virtuospark<span>.</span></a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
-
+  
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="index.html #hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="index.html #about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html #services">Services</a></li>
-          <li><a class="nav-link scrollto" href="index.html #team">Team</a></li>
-          <li><a class="nav-link scrollto " href="careers.html">Careers</a></li>
-          <li><a class="nav-link scrollto" href="blog.html">Insights</a></li>
-          <li><a class="nav-link scrollto" href="index.html #contact">Contact</a></li>
+          <li><a class="nav-link scrollto " href="{{url_for('homepage')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#services">Services</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#clients">Tech-Stack</a></li> -->
+          <li><a class="nav-link scrollto " href="/blog">Insights</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#team">Team</a></li>
+          <li><a class="nav-link" href="/careers">Careers</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('homepage') }}#contact">Contact</a></li>
+          <!-- <li><a href="blog">Blog</a></li> -->
+  
+  
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+  
     </div>
   </header><!-- End Header -->
->>>>>>> origin/main:termofservice.html
+
 
   <main id="main">
 
@@ -106,13 +103,11 @@
     <section class="breadcrumbs">
       <div class="container">
 
-<<<<<<< HEAD:templates/termofservice.html
         <ol>
           <li><a href="/">Home</a></li>
           <li>Terms of Services</li>
         </ol>
-=======
->>>>>>> origin/main:termofservice.html
+
         <h2>Terms of Services</h2>
 
       </div>
@@ -192,7 +187,6 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD:templates/termofservice.html
     
       <div class="container d-md-flex py-4">
     
@@ -209,7 +203,7 @@
       </div>
     </footer>
 <!-- End Footer -->
-=======
+
     </div>
 
     <div class="container d-md-flex py-4 d-flex justify-content-center align-items-center">
@@ -246,7 +240,6 @@
       </div>
   </div>
   </footer><!-- End Footer -->
->>>>>>> origin/main:termofservice.html
 
   <div id="scroll-Top">
     <a href="#" class="return-to-top back-to-top d-flex align-items-center justify-content-center">

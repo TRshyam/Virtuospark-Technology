@@ -30,7 +30,7 @@ def create_db_client(data):
     existing_emails = db.child('clients').order_by_child('email').equal_to(data['email']).get()
     if existing_emails.each():
         # print("Client with this email already exists.")
-        return "Already Registered"
+        return "Already Submited"
 
     # Generate a unique ID for the new client
     new_client_id =data['first_name']+str(uuid.uuid4())

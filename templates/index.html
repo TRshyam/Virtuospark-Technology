@@ -71,6 +71,8 @@
       document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
+    
+
   </script>
   <script src='static/assets/vendor/popup/regpopup.js'></script>
 
@@ -855,7 +857,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="number" class="form-control" name="number" id="number" placeholder="Contact Number" required>
+                <input type="tel" class="form-control" name="number" id="number" pattern="[0-9]{10}" maxlength="10" title="Enter a valid 10-digit phone number" placeholder="Contact Number" required>
               </div>
               <!-- <div class="form-group">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" >
