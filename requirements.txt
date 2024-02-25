@@ -1,0 +1,6 @@
+Flask
+pyrebase4
+Flask-Session
+python-dotenv
+psycopg2-binary
+gunicorn
