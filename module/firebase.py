@@ -40,7 +40,7 @@ def create_db_client(data):
     db.child("clients").child(new_client_id).set(data)
     mail.clients_mail(data)
     # print("Client created successfully")
-    return 'Registered Successfully'
+    return 'Submited Successfully'
 
 def create_db_candidates(data):
     # Check if the email already exists
