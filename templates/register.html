@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Virtuospark</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/assets/img/logo.png" rel="icon">
+  <link href="/staticassets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="/static/assets/css/reg.css"> -->
+  <script src='static/assets/vendor/popup/regpopup.js'></script>
+  <!-- <script>
+    function toggle() {
+      document.getElementById("popup-background").style.display = "block";
+    }
+    function toggleclose() {
+      document.getElementById("popup-background").style.display = "none";
+    }
+    function validateform() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var phone = document.forms["myForm"]["phone"].value;
+      var checkbox = document.forms["myForm"]["checkbox"].checked;
+      var course = document.forms["myForm"]["course"].value;
+
+      // Name validation (not empty)
+      if (name == "") {
+        document.getElementById("nameError").innerHTML = "Name must be filled out";
+        return false;
+      } else {
+        document.getElementById("nameError").innerHTML = "";
+      }
+
+      // Email validation
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML = "Invalid email address";
+        return false;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+      }
+
+      // Phone validation (10 digits and only digits)
+      if (isNaN(phone) || phone.length != 10) {
+        document.getElementById("phoneError").innerHTML = "Phone number must be 10 digits";
+        return false;
+      } else {
+        document.getElementById("phoneError").innerHTML = "";
+      }
+
+      // Course validation
+      if (course == "course-type") {
+        document.getElementById("courseError").innerHTML = "Please select a course";
+        return false;
+      } else {
+        document.getElementById("courseError").innerHTML = "";
+      }
+
+      // Checkbox validation
+      if (!checkbox) {
+        document.getElementById("checkboxError").innerHTML = "Please agree to the Privacy Policy";
+        return false;
+      } else {
+        document.getElementById("checkboxError").innerHTML = "";
+      }
+
+      // Successful submit message
+      toggle(); // Show popup
+      return true;
+    }
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    window.addEventListener('keydown', function (e) {
+      if ((e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'u')) {
+        e.preventDefault();
+      }
+    });
+
+  </script> -->
+<style>
+      html,
+  body {
+      height: 100vh;
+  }
+
+  body,
+  div,
+  form,
+  input,
+  select {
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+  }
+
+
+  body {
+      background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+      background-size: cover;
+  }
+
+  .popup-message {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 50px;
+      border-radius: 5px;
+      display: none;
+  }
+
+  h1,
+  h2 {
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+
+  h2 {
+      margin: 0 0 0 8px;
+  }
+
+  .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100vh;
+      /* Set height to 100% of the viewport height */
+      background: #fff;
+  }
+
+  .left-part,
+  form {
+      padding: 25px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .left-part {
+      text-align: center;
+      background: #323635;
+      color: white;
+  }
+
+  .fa-graduation-cap {
+      font-size: 72px;
+  }
+
+  form {
+      background: white;
+  }
+
+  .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+  }
+
+  .info {
+      display: flex;
+      flex-direction: column;
+  }
+
+  input,
+  select {
+      background: transparent;
+      color: #999b9b;
+      border: none;
+      border-bottom: 1px solid #d6d5d5;
+
+  }
+
+  input::placeholder {
+      color: #999b9b;
+  }
+
+  option:focus {
+      border: none;
+  }
+
+  option {
+      background: white;
+      border: none;
+  }
+
+  .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+  }
+
+  .checkbox a {
+      color: #26a9e0;
+  }
+
+  .checkbox a:hover {
+      color: #85d6de;
+  }
+
+  .card-quotes {
+      color: white;
+      text-align: left;
+      align-items: center;
+      width: auto;
+      font-size: 18px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  ul {
+      list-style: none;
+      line-height: 6vh;
+  }
+
+  ul li:before {
+      content: '\2714\0020';
+      color: #e03a3c;
+  }
+
+
+
+
+  .btn-item,
+  button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: none;
+      background: #e03a3c;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+  }
+
+  .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+  }
+
+  button {
+      width: 15%;
+  }
+
+
+
+  button:hover,
+  .btn-item:hover {
+      background: black;
+  }
+
+  button[type="submit"] {
+      width: 30%;
+      /* Ensure the button takes full width */
+      padding: 10px;
+      /* Adjust padding */
+      margin-top: 20px;
+      /* Add space between the form and the button */
+      border: none;
+      border-radius: 5px;
+      background: #070707;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+  }
+
+  @media only screen and (max-width: 767px) {
+      button[type="submit"] {
+          width: 100%;
+      }
+
+      .card-quotes {
+          margin-left: 0;
+      }
+
+      ul {
+          list-style: none;
+          line-height: 3vh;
+      }
+  }
+
+  button[type="submit"]:hover {
+      background: #333;
+  }
+
+  @media (min-width: 768px) {
+
+      html,
+      body {
+          min-height: 100%;
+      }
+
+      .main-block {
+          flex-direction: row;
+      }
+
+      .left-part,
+      form {
+          flex: 1;
+      }
+
+      button {
+          width: 100%;
+      }
+  }
+
+  
+</style>
+
+</head>
+
+<body>
+  <div class="main-block">
+    <div class="left-part">
+      <i class="fas fa-graduation-cap" style="color: #e03a3c;"></i>
+      <h1>Register to get intern</h1>
+      <p style="font-size: 18px;">Ready to unleash your potential? Register for our internship program today!</p>
+
+      <div class="card-quotes">
+        <ul>
+          <li>Work hard, play hard</li>
+          <li>Find your tribe</li>
+          <li>Level Up Your Skills</li>
+          <li>Learn Fast, Grow Faster</li>
+      </div>
+    </div>
+    <form action="/register" method="POST" onsubmit="handleSubmit(event,'/register')">
+      <div class="title">
+        <i class="fas fa-pencil-alt"></i>
+        <h2>Register here</h2><br>
+      </div>
+      <div class="info">
+        <input class="fname" type="text" name="name" placeholder="Full name" required><br>
+        <span id="nameError" style="color: #e03a3c;"></span><br>
+        <input type="text" name="email" placeholder="Email" required><br>
+        <span id="emailError" style="color: #e03a3c;"></span><br>
+        <input type="tel" name="phone" placeholder="Phone number"required><br>
+        <span id="phoneError" style="color: #e03a3c;"></span><br>
+        <select name="course" required>
+          <option value="course-type" selected>Course type</option>
+          <option value="app-development">App Development</option>
+          <option value="uiux-development">UIUX Development</option>
+          <option value="web-development">Web Development</option>
+          <option value="digital-marketing">Digital Marketing</option>
+        </select><br>
+        <span id="courseError" style="color: #e03a3c;"></span><br>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="checkbox" required><span style="color: #999b9b">I agree to the <a
+            href="/privacypolicy">Privacy Policy.</a></span><br>
+        <span id="checkboxError" style="color: #e03a3c;" ></span><br>
+      </div>
+      <button type="submit">Submit</button>
+
+    <div class="popup-message"></div>
+
+    </form>
+    <section id="popup-background" style="display: none;">
+      <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()"></i>
+        <div style="display: flex;flex-direction: row;">
+          <!-- <div style="width: 50%;" class="explore-quotes">
+            <p>Thank you for registering!</p>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

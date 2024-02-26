@@ -1,0 +1,49 @@
+<section id="popup-background">
+    <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()"></i>
+        <div style="display: flex;flex-direction: column;">
+            <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Let's Explore</h1>
+            <div class="explore-quotes">
+                <p>Tired of endless searching? We curate connections that click. Register your business and find the
+                    ideal solution for your problems, effortlessly.</p>
+            </div>
+            <div class="eform-area">
+                <div class="eform-inner">
+                        <form method="POST" action="/submit_form" onsubmit="handleSubmit(event, '/submit_form')">
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="First Name" value="" name="first_name" required />
+                            </div>
+                            <div class="eform-group">
+                                <input type="text" class="eform-control" placeholder="Last Name" value="" name="last_name" required />
+                            </div>
+<div class="eform-group">
+    <!-- <input type="number" id="mobile_code"  maxlength="10" class="eform-control intlTelInput" placeholder="Phone Number"
+        name="phone_number" required> -->
+        <input type="tel" class="eform-control" id="phone_number" name="phone_number" placeholder="Phone Number" pattern="[0-9]{10}"  title="Enter a valid 10-digit phone number" maxlength="10" required>
+</div>
+                            <div class="eform-group">
+                                <input type="email" class="eform-control" placeholder="Email" name="email" required>
+                            </div>
+                            <div class="popup-message"></div>
+                        
+                            <button type="submit" class="btn form-submit">Submit</button><br>
+                            <span> By proceeding you agree to the
+                                <a href="/termofservice">Terms</a> and <a href="/privacypolicy">Privacy
+                                    Policy.</a>
+                            </span>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="popup-background">
+    <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()"></i>
+        <div style="display: flex;flex-direction: row;">
+            <div style="width: 50%;" class="explore-quotes">
+                <p>Thankyou</p>
+            </div>
+        </div>
+    </div>
+</section>
