@@ -577,7 +577,8 @@ section {
 }
 
 .about .content {
-  padding: 30px 30px 30px 0;
+  padding: 30px;
+  text-align: center;
 }
 
 .about .content h3 {
@@ -1321,7 +1322,7 @@ section {
   height: 320px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  margin: 20px 30px 10px 30px;
+  margin: 30px;
   padding: 0;
 }
 .pricing i {
@@ -2132,21 +2133,20 @@ section {
 }
 
 #footer .credits {
-  padding-top: 5px;
   font-size: 13px;
 }
 
 #footer .social-links ul{
   display: flex;
   list-style: none;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .item a {
   font-size: 18px;
   text-decoration: none;
-  width: 37px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   background-color: #f0f9fe;
   border-radius: 50%;
   display: flex;
@@ -2233,7 +2233,7 @@ explore-popup */
   margin:auto;
   background-color: white;
   padding: 20px;
-  width: 50%;
+  width: 80%;
 }
 
 .explore-quotes{
