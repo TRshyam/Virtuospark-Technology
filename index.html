@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Presento Bootstrap Template - Index</title>
+  <title>Virtuospark</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -24,25 +24,56 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Presento
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <script>
+    function toggle()
+        {
+          document.getElementById("popup-background").style.display="block";
+        }
+    function toggleclose()
+    {
+      document.getElementById("popup-background").style.display="none";
+    }
+    function aboutscrool()
+    {
+        const additionalContent=document.getElementById("additional-content");
+        if (additionalContent) {
+        console.log(additionalContent.style.display === "none")
+        additionalContent.style.display =
+          additionalContent.style.display === "none" ? "block" : "none";
+        }
+        document.getElementById("additional-content").scrollIntoView({ behavior: 'smooth' ,block: 'start'});
+    }
+    window.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    window.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.key === 'u')) {
+            e.preventDefault();
+       }
+    });
+
+  </script>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html">Presento<span>.</span></a></h1>
+    <div class="container d-flex align-items-center"> 
+      <h1 class="logo me-auto">
+        <a href="index.html">Virtuospark<span>.</span></a>
+      </h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
@@ -51,67 +82,117 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#clients">Tech-Stack</a></li> -->
+          <li><a class="nav-link scrollto " href="#portfolio">Insights</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
+          <li><a href="careers.html">Careers</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
     </div>
-  </header><!-- End Header -->
-
+    <script>
+      
+          
+    </script>
+  </header><br>
+  <!-- End Header -->
+  <!-- <section id="progress-section" class="progress-section">
+    <div id="progress-line" class="progress-line">
+      <div id="progress" class="progress" style="width: 0%;"></div>
+    </div>
+  </section> -->
+  <!-- <script>
+    window.addEventListener("scroll", function () {
+      // Get the height of the entire document
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      
+      // Calculate the current scroll position as a percentage
+      const scrollPercentage = (window.scrollY / docHeight) * 100;
+      
+      // Update the width of the progress bar
+      document.getElementById("progress").style.width = scrollPercentage + "%";
+    });
+   
+  </script> -->
+    
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
+  <section id="hero" class="d-flex align-items-center" style="display: flex; flex-direction: column; ">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <div class="row">
+      <div class="row" style="margin-top: 100px;">
         <div class="col-xl-6">
-          <h1>Bettter digital experience with Presento</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
-          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+          <h1>We decode your needs, craft your success</h1>
+          <h2 style="line-height: 40px;">Transform your work, protect your data.<br> Unmatched power, unwavering trust.</h2>
+          <a class="btn-get-started scrollto" onclick="toggle()" style="cursor: pointer;">Explore</a>
         </div>
       </div>
     </div>
 
   </section><!-- End Hero -->
-
+  <!--explore section-->
+  <section id="popup-background">
+    <div id="popup">
+      <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()"></i>
+      <div style="display: flex;flex-direction: column;">
+        <h1 style="font: 25px bold; padding: 10px; color: black;">Welcome! Let's Explore</h1>
+        <div class="explore-quotes">
+          <p>Tired of endless searching? We curate connections that click. Register your business and find the ideal solution for your problems, effortlessly.</p>
+        </div>
+        <div class="eform-area">
+          <div class="eform-inner">
+            <form class="eform">
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="First Name" value="" required/>
+              </div>
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="Last Name" value="" required/>
+              </div>
+              <div class="eform-group">
+                <input type="phone" id="mobile_code" class="eform-control intlTelInput" placeholder="Phone Number" name="name" required>
+              </div>
+              <div class="eform-group">
+                <input type="text" class="eform-control" placeholder="Email" name="name" required>
+              </div>
+              <button type="submit" class="btn form-submit">Submit</button><br>
+              <span> By proceeding you agree to the 
+                <a href="termofservice.html">Terms</a> and <a href="privacypolicy.html">Privacy Policy.</a>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <section id="popup-background">
+    <div id="popup">
+        <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+        <div style="display: flex;flex-direction: row;">
+          <div style="width: 50%;" class="explore-quotes">
+            <p>Thankyou</p>
+          </div>
+        </div>
+    </div>  
+  </section>
+  <!--end explore section-->
   <main id="main">
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
+      
       <div class="container" data-aos="zoom-in">
-
+        <div class="section-title">
+          <h2>Tech-Stack</h2>
+        </div>
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
+            <div class="swiper-slide"><img src="assets/img/clients/reactjs.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients//django-vector-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/flask-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/mongo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/MySQL1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/reactnative.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/figma-logo.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/tensorflow-logo.png" class="img-fluid" alt=""></div>          </div>
           <div class="swiper-pagination"></div>
         </div>
 
@@ -125,35 +206,35 @@
         <div class="row no-gutters">
           <div class="content col-xl-5 d-flex align-items-stretch">
             <div class="content">
-              <h3>Voluptatem dignissimos provident quasi</h3>
+              <h3>Your vision, our blueprint: Tools that speak your language.</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Where ideas spark, and problems vanish, unleash your software potential with VIRTUOSPARK.
               </p>
-              <a href="#" class="about-btn"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
+              <a  style="cursor: pointer;" class="about-btn" onclick="aboutscrool()"><span>About us</span> <i class="bx bx-chevron-right"></i></a>
             </div>
           </div>
           <div class="col-xl-7 d-flex align-items-stretch">
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                  <i class='bx bx-brain'></i>
+                  <h4>Young brains</h4>
+                  <p>Supercharged engines, fueled by the curiosity of young minds. We secure, accessible tools to ignite their imagination and help build amazing things.</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                  <i class='bx bx-bulb' style='color:#e03a3c' ></i>
+                  <h4>Ideal solution</h4>
+                  <p>Stop settling our ideal solution unlocks your potential, fitting seamlessly. Discover the satisfaction of coding expertise.</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>Labore consequatur</h4>
-                  <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                  <i class='bx bx-code'></i>
+                  <h4>Trustworthy</h4>
+                  <p>Our team boasts a proven track record of successful projects delivered on time and within budget.</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
-                  <h4>Beatae veritatis</h4>
-                  <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                  <i class='bx bx-shield'></i>
+                  <h4>Security</h4>
+                  <p>VIRTUOSPARK provides secure solutions, encrypting your data at rest and in transit for complete peace of mind.</p>
                 </div>
               </div>
             </div><!-- End .content-->
@@ -162,6 +243,62 @@
 
       </div>
     </section><!-- End About Section -->
+    <section id="additional-content" class="about" style="display: none;" >
+      <div class="container" data-aos="fade-up">
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; align-items: center;">
+    
+          <!-- Vision Box -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="vision-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Vision</h4>
+                  <p>To revolutionize the software industry by empowering businesses of all sizes to leverage cutting-edge technology to achieve their unique goals and aspirations. We envision a future where software is not just a tool, but a strategic partner, seamlessly integrated into every aspect of an organization's operations, efficiency and growth.</p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Mission Box -->
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="mission-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Mission</h4>
+                  <p>Our mission is to provide exceptional, client-centric software solutions that are tailored to each client's specific needs and challenges.We achieve this through a collaborative approach, where we work closely with our clients to understand their vision, develop innovative solutions, and deliver projects on time and within budget. </p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Motto Box -->
+          <div class="row">
+            <div class="col-lg-12 mt-4">
+              <div class="motto-box card1">
+                <div class="content-box" style="padding: 10px;">
+                  <h4 style="font-weight: bold;">Our Motto</h4>
+                  <p>Our motto goes beyond simply creating software or offering services. We're driven by a deep-seated desire to unleash the potential that lies within individuals, businesses, and communities. We believe that technology is a powerful tool that can be harnessed to empower innovation and drive positive change in the world.</p>
+                  <div class="go-corner" href="#">
+                    <div class="go-arrow"></div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    
+    
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
@@ -172,7 +309,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="70" data-purecounter-duration="1" class="purecounter"></span>
               <p>Happy Clients</p>
             </div>
           </div>
@@ -180,7 +317,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="168" data-purecounter-duration="1" class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div>
@@ -188,7 +325,7 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="582" data-purecounter-duration="1" class="purecounter"></span>
               <p>Hours Of Support</p>
             </div>
           </div>
@@ -214,25 +351,25 @@
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <i class="ri-gps-line"></i>
-              <h4 class="d-none d-lg-block">Modi sit est dela pireda nest</h4>
+              <h4 class="d-none d-lg-block">Awesome Support</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
               <i class="ri-body-scan-line"></i>
-              <h4 class="d-none d-lg-block">Unde praesenti mara setra le</h4>
+              <h4 class="d-none d-lg-block">Truly Multipurpose</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
               <i class="ri-sun-line"></i>
-              <h4 class="d-none d-lg-block">Pariatur explica nitro dela</h4>
+              <h4 class="d-none d-lg-block">Easy to customize</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <i class="ri-store-line"></i>
-              <h4 class="d-none d-lg-block">Nostrum qui dile node</h4>
+              <h4 class="d-none d-lg-block">Responsive & Clean Design</h4>
             </a>
           </li>
         </ul>
@@ -241,20 +378,10 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                <h3>Expect clear communication and responsive service.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  We believe support shouldn't be a frustrating experience. That's why we offer crystal-clear communication and lightning-fast responses, ensuring your questions are answered before they turn into full-blown storms.
+                  Think of us as your personal support champions, dedicated to understanding your needs and resolving your issues efficiently. No more waiting in endless email queues or getting bounced around like a lost package. Clear communication from the get-go means you know exactly what's happening every step of the way.
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
@@ -265,45 +392,22 @@
           <div class="tab-pane" id="tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Neque exercitationem debitis soluta quos debitis quo mollitia officia est</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                <h3>We craft solutions that effortlessly bend to your will.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Truly Multipurpose: Bending Solutions to Your Will Forget the days of rigid, one-size-fits-all products. Your needs are unique, and your solutions should be too. We don't just build software, we craft flexible tools that bend to your will. Think of us as architects, meticulously designing platforms and applications that seamlessly adapt to your evolving vision. Whether you're a nimble startup or an established enterprise, our solutions scale and shift alongside you. Need to add new features? No problem. Our modular design allows seamless integration and customization, ensuring your tools always align with your goals.
                 </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid">
+                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid" >
               </div>
             </div>
           </div>
           <div class="tab-pane" id="tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Voluptatibus commodi ut accusamus ea repudiandae ut autem dolor ut assumenda</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-                </ul>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                <h3>Our tools and services are built with easy customization.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  Our commitment to easy customization isn't just a feature, it's a philosophy. he business landscape is dynamic, and your needs evolve. Our tools are built to keep pace. With intuitive interfaces and drag-and-drop functionality, you can effortlessly adapt workflows, reports, and dashboards to seamlessly reflect your changing priorities. Let everyone join the innovation journey. Our user-friendly customization features don't require coding expertise. Empower your team members to tailor their experiences, boosting efficiency and ownership.
                 </p>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
@@ -314,21 +418,10 @@
           <div class="tab-pane" id="tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Omnis fugiat ea explicabo sunt dolorum asperiores sequi inventore rerum</h3>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
+                <h3>Creating good design and impressive your audience.</h3><br>
+                <p style="text-align: justify; line-height: 40px;">
+                  In today's digital landscape, attention is currency. To capture yours truly, design needs to be both responsive and clean.  Imagine your audience engaging with your content across diverse devices – desktops, tablets, and mobiles. A responsive design seamlessly adapts, delivering an optimal experience regardless of the screen size. This isn't just about aesthetics; it's about accessibility and respect for your audience's time. They shouldn't have to pinch, zoom, or scroll excessively to access your message. Visual clutter equals cognitive overload. A clean design prioritizes clarity and hierarchy, guiding the viewer's eye effortlessly towards the information you want them to see.
                 </p>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-                </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
                 <img src="assets/img/tabs-4.jpg" alt="" class="img-fluid">
@@ -346,50 +439,51 @@
 
         <div class="section-title">
           <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <h4>Unleash Your Digital Potential at VIRTUOSPARK</h4></br>
+          <p>We're not just passionate about technology; we're pioneers who envision a future where digital solutions seamlessly integrate into every aspect of life.</p>
         </div>
 
         <div class="row">
           <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class="bi bi-briefcase"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <i class='bx bx-devices'></i>
+              <h4>Web Development</h4>
+              <p>We weave your vision into websites that captivate and convert. Our expert developers build powerful, secure, and scalable online experiences that propel your brand forward. Think of us as digital architects, transforming your dreamed draft into a seamless and impactful online presence.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-card-checklist"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <i class='bx bx-mobile'   ></i>
+              <h4>App Development</h4>
+              <p>Turn your mobile ideas into engaging apps that simplify lives and connect users. We excel in crafting intuitive and beautiful interfaces that deliver exceptional user experience and prioritize seamless navigationand an overall experience that delights and engages your users</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-bar-chart"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <i class='bx bx-edit'></i>
+              <h4>UI/UX Design</h4>
+              <p>Our UI/UX designers are storytellers, creating interfaces that connect with users and don't just design interfaces, we design emotions. Our UI/UX experts create visually stunning and user-friendly experiences that resonate with your audience and drive engagement.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-binoculars"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <i class='bx bx-globe'></i>
+              <h4>Hosting</h4>
+              <p>Rest easy knowing your website is in safe hands. We offer reliable, secure, and scalable hosting solutions with lightning-fast performance to keep your online presence thriving. Experience blazing-fast loading speeds with our optimized servers and advanced caching technologies</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-brightness-high"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              <i class='bx bx-podcast'></i>
+              <h4>Marketing</h4>
+              <p>Amplify your digital voice. Our marketing experts craft data-driven strategies that attract your ideal audience and ignite brand awareness. We help you connect with your target market and achieve your marketing goals.</p>
             </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
-              <i class="bi bi-calendar4-week"></i>
-              <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <i class='bx bx-building'></i>
+              <h4>PC Building</h4>
+              <p>Don't settle for pre-built limitations. We custom-build high-performance PCs tailored to your specific needs and budget, whether you're a gaming enthusiast, creative professional, or business powerhouse.</p>
             </div>
           </div>
         </div>
@@ -402,19 +496,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
+          <h2>Insights</h2>
+          <p>A glimpse into the future we're actively building, ensuring your journey.</p>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -423,11 +506,13 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Embracing The Immersive</h4>
+                <p>We'll guide you in the captivating world of augmented reality (AR) and virtual reality (VR), crafting solutions that blur the lines between the physical and digital, fostering deeper engagement and unforgettable experiences.</p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="blog.html #blog-content-1" class="btn-blog">Click Me!
+                  </a>
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"></a>
+                  
                 </div>
               </div>
             </div>
@@ -437,11 +522,12 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Beyond Websites</h4>
+                <p>We're actively exploring the potential of web3 technologies like decentralisation and blockchain to create interactive, user-owned experiences that blur the lines between the physical and digital worlds.</p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="blog.html #blog-content-2" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"></a>
+                  
                 </div>
               </div>
             </div>
@@ -451,11 +537,11 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>AI-powered Marketing</h4>
+                <p> Personalized marketing campaigns driven by AI and automation will deliver highly targeted messages to specific audience segments, maximizing campaign effectiveness.</p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="blog.html #blog-content-3" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"></a>
                 </div>
               </div>
             </div>
@@ -465,11 +551,12 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>Cloud Integration</h4>
+                <p>PCs will seamlessly integrate with cloud services, offering on-demand storage, processing power, and software access for enhanced flexibility and performance.
+                </p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="blog.html #blog-content-4" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"></a>
                 </div>
               </div>
             </div>
@@ -479,12 +566,12 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>Center Stage</h4>
+                <p>We believe in harnessing technology for good. Expect eco-friendly solutions that minimize our environmental impact, from energy-efficient hosting to sustainable hardware choices.</p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
+                  <a href="blog.html #blog-content-5" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"></a>
+                  </div>
               </div>
             </div>
           </div>
@@ -493,57 +580,18 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>Hyper-Personalize</h4>
+                <p>We'll leverage the power of AI and imagine websites that intuitively adapt to preferences, apps that anticipate your needs, and marketing campaigns that resonate on a deeply personal level.
+                </p><br>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="blog.html #blog-content-6" class="btn-blog">Click Me!</a>
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
 
@@ -555,7 +603,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <p>Beyond words, beyond expectations, discover real experiences that showcase the power of our work and dive into testimonials that speak volumes about our work.</p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -564,12 +612,12 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
+                  <img src="assets/img/testimonials/char1.jpeg" class="testimonial-img" alt="">
+                  <h3>Rohini</h3>
+                  <h4>Developer</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    Working with VIRTUOSPARK felt collaborative and supportive and allowed me to showcase their skills and expectations.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -579,12 +627,12 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
+                  <img src="assets/img/testimonials/char5.jpeg" class="testimonial-img" alt="">
+                  <h3>Udhaya Kumar</h3>
+                  <h4>Business Analyst</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    They had clear communication and a collaborative approach, which made my job as a business analyst much easier. 
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -594,12 +642,12 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
+                  <img src="assets/img/testimonials/char2.jpeg" class="testimonial-img" alt="">
+                  <h3>Rohan Kumar</h3>
+                  <h4>Developer</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    The detailed breakdown of functionalities in the developer brief enabled me to quickly build a high-performing Flutter app
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -609,12 +657,12 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
+                  <img src="assets/img/testimonials/char3.jpeg" class="testimonial-img" alt="">
+                  <h3>Gowsalya</h3>
                   <h4>Freelancer</h4>
-                  <p>
+                  <p> 
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    Their clear communication and teamwork expertise allowed them to deliver a web page that exceeded our expectations.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -624,12 +672,12 @@
             <div class="swiper-slide">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
+                  <img src="assets/img/testimonials/char6.jpeg" class="testimonial-img" alt="">
+                  <h3>Krithika</h3>
                   <h4>Entrepreneur</h4>
                   <p>
                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat esse veniam culpa fore nisi cillum quid.
+                    Thanks to the collaborative spirit and bounced ideas off each other and pushed each other to deliver the best app.
                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                   </p>
                 </div>
@@ -646,70 +694,59 @@
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing section-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <h2>Snapshot</h2>
+          <p>Bridging the gap between dreams and digital reality</p>
         </div>
-
+    
         <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="box" data-aos="fade-up" data-aos-delay="100">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-booklet-fill"></i>
+                <h3 style="font-size: 20px;">Overview</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>VIRTUOSPARK, we're not just coders, we're creators and code whisperers. We speak your language, understanding your unique needs and challenges. Forget cookie-cutter solutions - we craft bespoke software masterpieces that fit like a glove, empowering you to achieve what others only dream of.</p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" data-aos="fade-up" data-aos-delay="200">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+ 
+    
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-questionnaire-fill"></i>
+                <br>
+                <h3 style="font-size: 20px;">
+                  Why VIRTUOSPARK?
+                  </h3>
+              </div>
+              <div class="flip-card-back">
+                <p>VIRTUOSPARK, we empower young minds to spark their tech potential with safe, secure, and engaging tools. We believe nurturing the next generation is key to a brighter future, setting us apart with our genuine commitment. Don't sweat the tech headaches - our highly secured maintenance and transparent communication ensure you can focus on your business, knowing your future tech leaders are in good hands.
+                  .</p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="fade-up" data-aos-delay="300">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+    
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="ri-shake-hands-fill"></i>
+                <br>
+                <h3 style="font-size: 20px;">Commitment 
+                </h3>
+              </div>
+              <div class="flip-card-back">
+                <p>We believe in unlocking the potential within individuals, businesses, and communities. We achieve this through tailored software solutions, accessible tools for young minds, and fostering a culture of innovation and learning. We're not just creating software; we're building a brighter future where technology empowers everyone.
+                </p>
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Pricing Section -->
-
+    
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq">
       <div class="container" data-aos="fade-up">
@@ -721,55 +758,55 @@
         <ul class="faq-list accordion" data-aos="fade-up">
 
           <li>
-            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">What makes your company different from your competitors?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq1" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                Teamwork is our superpower! We go the extra mile to ensure you achieve your goals, fueled by passion, agility, and a smile. Together, we tackle any challenge, turning them into triumphs.
               </p>
             </div>
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">What are your core values and how do they influence your work?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq2" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Values aren't just words on a wall, they're the compass guiding our ship. Passion, collaboration, integrity, and client-centricity - join us on a voyage to remarkable.
               </p>
             </div>
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">Do you provide ongoing support after the project is completed?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq3" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                Yes, we certainly do! We understand that your needs may evolve after the project is complete, and we're here to support you every step of the way. Whether it's maintenance, updates, or new functionalities, we're just a call away.
               </p>
             </div>
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">Do you offer any guarantees or warranties for your services? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq4" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                We'll achieve SEO strategies, engaging content creation, and website performance enhancements and continue working with you until the targets are met, within reason and excluding external factors outside our control.
               </p>
             </div>
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">What specific services or solutions do you offer?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq5" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                Requires students to be enrolled or completed in a degree program. An average GPA is required, though the specific threshold may vary by program.
               </p>
             </div>
           </li>
 
           <li>
-            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">What kind of training and support will I receive?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
             <div id="faq6" class="collapse" data-bs-parent=".faq-list">
               <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                Creating visually appealing and user-friendly websites that adapt to different screen sizes, Building intuitive and engaging mobile apps that deliver exceptional user experiences and  Creating a consistent brand identity across all touchpoints, including websites, marketing materials, and social media.
               </p>
             </div>
           </li>
@@ -785,7 +822,8 @@
 
         <div class="section-title">
           <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <p>Not just colleagues, but a collective force for innovation. Meet the minds behind the magic.</p>
+          
         </div>
 
         <div class="row">
@@ -793,17 +831,11 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Jagadeesh</h4>
+                <span>Founder & CEO</span>
               </div>
             </div>
           </div>
@@ -811,17 +843,11 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="assets/img/team/team-6.jpg" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Om Sri Eswar</h4>
+                <span>CTO</span>
               </div>
             </div>
           </div>
@@ -829,17 +855,11 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="assets/img/team/team-9.jpg" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Shyam</h4>
+                <span>Vice President</span>
               </div>
             </div>
           </div>
@@ -847,17 +867,11 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                <img src="assets/img/team/team-8.jpg" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Sowmiyapriya</h4>
+                <span>Product Manager</span>
               </div>
             </div>
           </div>
@@ -873,7 +887,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
+          <p>Ready to explore? From pricing inquiries to personalized demos, we're here to guide you. Connect for answers & demos tailored to your needs.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -885,21 +899,23 @@
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p><B>Head Office:</B> 19/31a, odakadu, narayana nagar, Amman nagar, <br>  Kumarapalaym, Tamil Nadu - 638183.</p>
+                  <p><B>Branch:</B> 33, P.P.Plaza, Palanimalai Street, Kottai,Erode-638001.</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>info@virtuospark.com</p>
+                  <p>support@virtuospark.com</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>+91 81100 30751<br>+91 88839 91745</p>
                 </div>
               </div>
             </div>
@@ -917,7 +933,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Contact Number" required>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -935,7 +951,16 @@
 
       </div>
     </section><!-- End Contact Section -->
-
+    <section id="popup-background">
+      <div id="popup">
+          <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+          <div style="display: flex;flex-direction: row;">
+            <div style="width: 50%;" class="explore-quotes">
+              <p>Thankyou</p>
+            </div>
+          </div>
+      </div>  
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -946,75 +971,111 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Presento<span>.</span></h3>
+            <h3>Virtuospark<span>.</span></h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              19/31a, odakadu, narayana nagar,<br> Amman nagar, Kumarapalaym,<br> Tamil Nadu - 638183<br>
+              <strong>Phone:</strong> +91 8110030751<br>
+              <strong>Email:</strong> info@virtuospark.com<br>
             </p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#portfolio">Insights</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="termofservice.html">Terms of Service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="privacypolicy.html">Privacy policy</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>App Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>UI/UX Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>Hosting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a>PC Building</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Be the first to know about exciting news & updates.</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
+            <div>
+              <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Warning: This is a warning alert!</span>
+                <div class="close-btn">
+                   <span class="fas fa-times"></span>
+                </div>
+             </div>
+            </div>
+            
           </div>
+          <section id="popup-background">
+            <div id="popup">
+                <i class="ri-close-circle-fill" type="button" style="float: right; size: 10px;" onclick="toggleclose()" ></i>
+                <div style="display: flex;flex-direction: row;">
+                  <div style="width: 50%;" class="explore-quotes">
+                    <p>Thankyou</p>
+                  </div>
+                </div>
+            </div>  
+          </section>
 
         </div>
       </div>
     </div>
 
-    <div class="container d-md-flex py-4">
-
+    <div class="container d-md-flex py-4 d-flex justify-content-center align-items-center">
       <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+          <div class="copyright">
+              &copy; Copyright <strong><span> Virtuospark</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+              <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+          </div>
       </div>
       <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <ul>
+              <li class="item">
+                  <a href="https://x.com/virtuospark?t=nD6vMrFYNbxk0HoKobqiDQ&s=09" class="twitter"><i class="icon bx bxl-twitter"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.facebook.com/profile.php?id=61556189139151&mibextid=rS40aB7S9Ucbxw6v" class="facebook"><i class="icon bx bxl-facebook"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.instagram.com/virtuospark?igsh=NDFyYmVvODlseHZk" class="instagram"><i class="icon bx bxl-instagram"></i></a>
+              </li>
+              <li class="item">
+                  <a href="https://www.linkedin.com/in/virtuospark-technologies-1532152b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="icon bx bxl-linkedin"></i></a>
+              </li>
+              <li class="item">
+                  <a target="_blank" href="https://wa.me/7871007741" class="youtube"><i class="icon bx bxl-whatsapp"></i></a>
+              </li>
+          </ul>
       </div>
-    </div>
+  </div>
+  
   </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="scroll-Top">
+    <a href="#" class="return-to-top back-to-top d-flex align-items-center justify-content-center">
+      <i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+    </a>
+  </div>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
