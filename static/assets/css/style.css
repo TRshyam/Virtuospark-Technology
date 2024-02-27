@@ -52,6 +52,12 @@
   background-color: #dc3545;
   /* or any color you prefer for danger/error messages */
 }
+
+
+
+
+
+
     /**
     * Template Name: Presento
     * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -633,7 +639,7 @@
     }
   
     .about .content {
-      padding: 30px 30px 30px 0;
+      padding: 30px;
     }
   
     .about .content h3 {
@@ -2328,7 +2334,7 @@
       margin: auto;
       background-color: white;
       padding: 20px;
-      width: 50%;
+      width: 80%;
     }
   
     .explore-quotes {
@@ -2522,7 +2528,7 @@
       color: black;
       font-size: 18px;
       text-align: center;
-    }
+}
 
             /* Hide the increment and decrement arrows */
             input[type="number"]::-webkit-inner-spin-button,
@@ -2533,4 +2539,4 @@
       
             input[type="number"] {
               -moz-appearance: textfield;
-            }
+    }
