@@ -577,7 +577,7 @@ section {
 }
 
 .about .content {
-  padding: 30px;
+  padding: 40px;
 }
 
 .about .content h3 {
@@ -2208,6 +2208,22 @@ section {
   font-size: 25px;
   color: #e35052;
 }
+.container-footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 100px;
+  padding-left: 30px;
+}
+@media (max-width: 768px) {
+  .container-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
 /* 
 explore-popup */
 .explore-btn
@@ -2233,7 +2249,13 @@ explore-popup */
   margin:auto;
   background-color: white;
   padding: 20px;
-  width: 80%;
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  #popup{
+    width: 80%;
+  }
 }
 
 .explore-quotes{
@@ -2375,6 +2397,7 @@ border:1px solid #ff545a;
   0%   {bottom:0px;}
   100%  {bottom:7px;}
 }
+
 /*===============================
     Terms of Service
 ===============================*/
