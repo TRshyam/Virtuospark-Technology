@@ -26,10 +26,10 @@ function showPopup(message) {
         'bottom': '10px', // Adjust this value as needed
         'right': '10px',  // Adjust this value as needed
         'position': 'fixed',
-        'background-color': '#e03a3c',
-        'border': '1px solid #e03a3c',  // Border color
+        'background-color': '#5FBF87',
+        'border': '1px solid #5FBF87',  // Border color
         'border-radius': '15px',  // Rounded corners
-        'padding': '40px',  // Padding
+        'padding': '30px',  // Padding
         'font-size': '18px',  // Font size
         'color': '#333',  // Text color
         'z-index': '9999',
