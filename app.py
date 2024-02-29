@@ -1,9 +1,15 @@
 from flask import Flask, render_template,request,redirect,url_for,flash,jsonify
 import module.firebase as fb
 import module.sendEmail as se
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+
+# sender_mail_id_web=os.getenv("sender_mail_id_web") 
 
 app = Flask(__name__)
-app.secret_key = '123456'
+app.secret_key =os.getenv('appsecret_key') 
 
 @app.route('/')
 def homepage():
@@ -43,8 +49,8 @@ def register():
 def termofservice():
     return render_template('termofservice.html')
 
-@app.route('/blog')
-def blog():
+@app.route('/insights')
+def insights():
     return render_template('blog.html')
 
 @app.route('/blog-single')

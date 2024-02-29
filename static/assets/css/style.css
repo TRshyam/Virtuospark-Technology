@@ -56,8 +56,6 @@
 
 
 
-
-
     /**
     * Template Name: Presento
     * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -639,7 +637,7 @@
     }
   
     .about .content {
-      padding: 30px;
+      padding: 40px;
     }
   
     .about .content h3 {
@@ -831,6 +829,7 @@
     .vision-box,
     .mission-box,
     .motto-box {
+      margin-left: 20px;
       flex: 1;
       max-width: 350px;
       height: 400px;
@@ -871,10 +870,6 @@
   
     .mission-box {
       margin: 0 15px;
-    }
-  
-    .motto-box {
-      margin-left: 20px;
     }
   
   
@@ -2311,6 +2306,23 @@
       color: #e35052;
     }
   
+    .container-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      padding-right: 100px;
+      padding-left: 30px;
+    }
+  
+    @media (max-width: 768px) {
+      .container-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+      }
+    }
+  
     /* 
   explore-popup */
     .explore-btn {
@@ -2334,7 +2346,13 @@
       margin: auto;
       background-color: white;
       padding: 20px;
-      width: 80%;
+      width: 50%;
+    }
+  
+    @media (max-width: 768px) {
+      #popup {
+        width: 80%;
+      }
     }
   
     .explore-quotes {
@@ -2528,15 +2546,4 @@
       color: black;
       font-size: 18px;
       text-align: center;
-}
-
-            /* Hide the increment and decrement arrows */
-            input[type="number"]::-webkit-inner-spin-button,
-            input[type="number"]::-webkit-outer-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-            }
-      
-            input[type="number"] {
-              -moz-appearance: textfield;
     }
