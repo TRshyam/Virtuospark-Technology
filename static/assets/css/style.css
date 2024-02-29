@@ -27,24 +27,25 @@
 
 
 .popup-message {
-            bottom: 10px;
-              right: 10px;
-              position: fixed;
-              background: linear-gradient(to bottom, rgba(87, 189, 130, 0.9) 0%, rgba(87, 189, 130, 0.7) 50%, rgba(87, 189, 130, 0.9) 100%);
-              border: 1px solid #5FBF87;
-              border-radius: 15px;
-              -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.47);
-              padding: 40px;
-              font-size: 18px;
-              color: #333;
-              z-index:9999 ;
-              display: none;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
+  bottom: 10px;
+  right: 10px;
+  position: fixed;
+  background-color: #e03a3c;
+  /* Set the background color directly */
+  border: 1px solid #e03a3c;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.47);
+  padding: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  z-index: 9999;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .alert-success {
-  background-color: #28a745;
+  background-color: #e03a3c;
   /* or any color you prefer for success messages */
 }
 
